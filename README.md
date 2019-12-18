@@ -204,15 +204,21 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
 spaces
 
+
+
 | Item           | Type              | Status         | Notes |
 |----------------|-------------------|----------------|-------|
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li></ul> | <ul><li>- [x] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
 |                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [x] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
 |                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
 |                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+
+
+  > 'Status' is 'pending' and 'in progress' by default
+
 
 no spaces
 
@@ -257,9 +263,22 @@ Click to expand me.
 <br><br>
 
 
-__General knowledge/tips__
+__General knowledge, tips__
 
   - You can apply to other lenders within 15 days without impacting credit
+
+
+<br><br>
+
+
+__Things we need to remember to consider__
+
+  - Toll cost
+  - Crime rate
+  - Traffic
+  - School district
+  - ( petty ) Sun in eyes during commute or at your back?
+  - Cable/internet/electric companies for the area
 
 
 <br><br>
@@ -272,6 +291,8 @@ __Questions for each visited lender/house/community__
   - What's your completion date policy? Do we get any sort of SLA if a build is delayed by something not caused by us? Is there an option to hold back funds for builder delays?
 
   - When can I come see the property during construction? Any rules?
+
+  - What would taxes/insurance/HOA cost for this house?
 
   - What's the ( more descriptive ) time line of house approval - house built - house move-in ready? What about the community? ( ex: Aubrey @ 8 months vs. Princeton @ 2/3 months )
 
@@ -297,8 +318,11 @@ __Questions for each visited lender/house/community__
 
 __General Questions__
 
-  - Whats the inspection process like?
+  - ( For DR Horton ) What are the HBC milestones? What're you looking for when reviewing banking/financial records? Any specificities we need to be aware of for obtaining approval?
 
+  - We've seen Princeton and Aubrey. Are there any other communities near or in between that'd be cheaper?
+
+  - Whats the inspection process like?
 
   - When we sign a purchase agreement does that lock in the price of the home? ( ex: we give the deposit now to hold a spot while we work on fixing credit and don't sign on a house until xx months later )
 
