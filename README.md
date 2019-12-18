@@ -108,26 +108,34 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br><br>
 
 
-__Project notes__
+### Supplemental project notes to track for sanity
 
-  1. Python env
+  > https://github.com/jsore/notes
+  >
+  > ~~Getting~~ Keeping my thoughts in order
 
-  indented space under number
 
-  2. Python env
-  indented no space under number
+<br><br>
 
-  3. Python env
 
-not indented
+__Python env__
 
-4. this isn't indented
+  ```
+  …/HouseWiki$ mkdir env
 
-  but this is two space indent
+  …/HouseWiki$ virtualenv env/house-wiki
 
-    this is four space indent
+  …/HouseWiki$ source env/house-wiki/bin/activate
 
-  another two space
+  …/HouseWiki$ pip install Django
+  …/HouseWiki$ python
+  >>> import django
+  >>> django.get_version()
+  '3.0'
+  ```
+
+
+
 
 
 
