@@ -202,6 +202,27 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 |----------------|-------------------|----------------|
 |                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
 
+spaces
+
+| Item           | Type              | Status         | Notes |
+|----------------|-------------------|----------------|-------|
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li></ul> | <ul><li>- [x] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                |                   |                |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [x] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                |                   |                |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                |                   |                |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+
+no spaces
+
+| Item           | Type              | Status         | Notes |
+|----------------|-------------------|----------------|-------|
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li></ul> | <ul><li>- [x] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [x] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+
 
 
 1. ( current ) Get it started
