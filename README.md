@@ -149,24 +149,109 @@ My main programming experience has been vanilla ES5/6 JavaScript ( plus all the 
 
 Eventually I want to migrate my existing site to pure Python. There will be some headaches so hopefully if I keep decent records of what I do before pushing to prod it'll help.
 
-<br>
+
+
+
+<br><br>
+
+
+
 
 Init setup:
 
   ```
-  …/HouseWiki$ mkdir env
+  …/HouseWiki
+  $ mkdir env
 
-  …/HouseWiki$ virtualenv env/house-wiki
+  …/HouseWiki
+  $ virtualenv env/house-wiki
 
-  …/HouseWiki$ source env/house-wiki/bin/activate
+  …/HouseWiki
+  $ source env/house-wiki/bin/activate
 
-  …/HouseWiki$ pip install Django  # remember to verify installation
-  …/HouseWiki$ python
+  (house_wiki) …/HouseWiki
+  $ pip install Django  # remember to verify installation
+
+  …/HouseWiki
+  $ python
   >>> import django
   >>> django.get_version()
   '3.0'
+
+  (house_wiki) …/HouseWiki
+  $ django-admin startproject housewiki
+
+  (house_wiki) …/HouseWiki
+  $ cd housewiki
+
+  (house_wiki) …/HouseWiki/housewiki
+  $ django-admin startapp home
+
+  (house_wiki) ~/Core/Dev/Pub
+  $ tree HouseWiki -a -C -I 'lib|.git' --dirsfirst
+  HouseWiki
+  ├── env                     <-- virtualenv's are disposable, keep them outside the project
+  │   └── house_wiki
+  │       ├── bin
+  │       │   ├── __pycache__
+  │       │   │   └── …
+  │       │   ├── activate
+  │       │   …
+  │       ├── include
+  │       …   └── …
+  ├── housewiki               <-- project root
+  │   ├── home                <-- app root
+  │   │   ├── migrations
+  │   │   │   └── __init__.py
+  │   │   ├── __init__.py
+  │   │   ├── admin.py
+  │   │   ├── apps.py
+  │   │   ├── models.py
+  │   │   ├── tests.py
+  │   │   └── views.py
+  │   ├── housewiki           <-- Django root ( project's connection with django )
+  │   │   ├── __init__.py
+  │   │   ├── asgi.py
+  │   │   ├── settings.py
+  │   │   ├── urls.py
+  │   │   └── wsgi.py
+  │   └── manage.py
+  └── README.md
+
+  10 directories, 38 files
   ```
 
+  > Regarding virtualenv and its placement:
+  > https://stackoverflow.com/questions/35936425/django-and-virtualenv-proper-project-structure
+  >
+  > Regarding Django root and misc. project structure:
+  > https://django-project-skeleton.readthedocs.io/en/latest/structure.html#django-root
+
+
+
+
+<br><br>
+
+
+
+
+Activate the `home` app in the project's `settings.py` then create ( migrate and apply the migrations ) the tables for the initial applications in the pre-existing SQLite DB
+
+  ```
+  (house_wiki) …/HouseWiki/housewiki
+  $ python manage.py migrate
+  ```
+
+Then spin up the dev server. Remember: use WSGI for prod and Django can run the server on a different settings file, useful for dealint with multiple environments requring a different settings file ( different configurations ).
+
+  ```
+  (house_wiki) …/HouseWiki/housewiki
+  $ python manage.py runserver
+
+  # optional, use a different settings file and specify a different default port
+  (house_wiki) …/HouseWiki/housewiki
+  $ python manage.py runserver 127.0.0.1:8001 --settings=differentsitename.settings
+  ```
 
 
 
@@ -203,7 +288,8 @@ __General knowledge, tips__
   - You can apply to other lenders within ~~15~~ 14 days without impacting credit
   - Insurance: make sure we have __replacement__ cost, not depreciation cost
   - This: `https://www.dhititle.com/Buyer-Resource-Center`
-
+  - ** notes from picture from tiff in messenger Dec 18th ~12:40pm **
+  - ** notes from the rest of the folder's docs **
 
 <br><br>
 
