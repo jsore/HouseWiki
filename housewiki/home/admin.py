@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # register models with the admin site
-from .models import Milestone, Question
+from .models import Milestone, Question, WishList
 
 
 # use a decorator instead of admin.site.register(<Model>)
@@ -44,8 +44,20 @@ class MilestoneAdmin(admin.ModelAdmin):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('title',
+                    'slug',
                     'supplemental_example',
                     'answered',
                     'answer')
     list_filter = ('answered',)
     search_fields = ('title', 'supplemental_example', 'answer')
+    prepopulated_fields =  {'slug': ('title',)}
+
+
+@admin.register(WishList)
+class WishListAdmin(admin.ModelAdmin):
+    list_display = ('wish',
+                    'slug',
+                    'ranking')
+    list_filter = ('ranking',)
+    search_fields = ('title', 'ranking')
+    prepopulated_fields =  {'slug': ('wish',)}

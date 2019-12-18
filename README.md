@@ -50,7 +50,7 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] General wish list for what we want in a house and community
-    + [ ] model
+    + [x] model
     + [ ] view
     + [ ] template
     + format: ordered list

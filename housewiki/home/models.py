@@ -60,6 +60,35 @@ class Question(models.Model):
     QUESTION_STATUS_CHOICES = (('answered', 'Answered'),
                                ('unanswered', 'Unanswered'))
     title = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
     supplemental_example = models.TextField(null=True, blank=True)
     answer = models.TextField(null=True, blank=True)
     answered = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ('answered',)
+
+    def __str__(self):
+        return self.title
+
+
+class WishList(models.Model):
+
+    WISH_RANKING_CHOICES = (('dealbreaker', 'Dealbreaker'),
+                            ('important', 'Important'),
+                            ('kind of important', 'Kind of Important'),
+                            ('almost petty', 'Almost Petty'),
+                            ('definitely petty', 'Definitely Petty'))
+    wish = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
+
+    ranking = models.CharField(max_length=20,
+                               choices=WISH_RANKING_CHOICES,
+                               default='kind of important')
+
+    class Meta:
+        ordering = ('ranking',)
+
+    def __str__(self):
+        return self.wish
+
