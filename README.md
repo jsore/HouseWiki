@@ -96,142 +96,18 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 --------------------------------------------------------------------------------------------------
 ### Project status updates & roadblocks
 
-#### no tags 1, `---` separating each item line
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
+| Item           | Type              | Status         |
 |----------------|-------------------|----------------|
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [x] action item | - [x] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-|----------------|-------------------|----------------|
-|                | - [ ] roadblock   | - [x] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-|----------------|-------------------|----------------|
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-
-#### no tags 2, no `---` between each item line
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | - [ ] roadblock   | - [x] current  |
-|                | - [x] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-
-#### no tags 3, spaces in place of `---` between each item line
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
+| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
 |                |                   |                |
-|                | - [x] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
 |                |                   |                |
-|                | - [ ] roadblock   | - [ ] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
 |                |                   |                |
-|                | - [ ] roadblock   | - [x] current  |
-|                | - [ ] action item | - [ ] pending  |
-|                |                   | - [ ] finished |
-|                |                   | - [ ] ignored  |
-
-
-#### ul/li tags 1, readable structure
-
-
-| Item           | Type                       | Status                  | Notes |
-|----------------|----------------------------|-------------------------|-------|
-| Get it started | <ul>                       | <ul>                    |
-|                | <li>- [ ] roadblock</li>   | <li>- [ ] current</li>  |
-|                | <li>- [ ] action item</li> | <li>- [ ] pending</li>  |
-|                | </ul>                      | <li>- [ ] finished</li> |
-|                |                            | <li>- [ ] ignored</li>  |
-|                |                            | </ul>                   |
-|----------------|----------------------------|-------------------------|
-|                | <ul>                       | <ul>                    |
-|                | <li>- [ ] roadblock</li>   | <li>- [ ] current</li>  |
-|                | <li>- [x] action item</li> | <li>- [x] pending</li>  |
-|                | </ul>                      | <li>- [ ] finished</li> |
-|                |                            | <li>- [ ] ignored</li>  |
-|                |                            | </ul>                   |
-
-
-
-#### ul/li tags 2, single line for each list
-
-(least favorite)
-
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li></ul> | <ul><li>- [x] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|----------------|-------------------|----------------|
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [x] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|----------------|-------------------|----------------|
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|----------------|-------------------|----------------|
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-
-spaces
-
-
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                |                   |                |
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                |                   |                |
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                |                   |                |
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
+|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
 
 
   > 'Status' is 'pending' and 'in progress' by default
-
-
-no spaces
-
-| Item           | Type              | Status         | Notes |
-|----------------|-------------------|----------------|-------|
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li></ul> | <ul><li>- [x] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [x] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li></ul> | <ul><li>- [ ] current</li><li>- [ ] pending</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul> |
-
-
-
-1. ( current ) Get it started
 
 
 
