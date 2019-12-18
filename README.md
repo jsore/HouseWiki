@@ -122,19 +122,19 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
 | Item                   | Type              | Status         | Notes |
 |------------------------|-------------------|----------------|-------|
-| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> | some example notes
+| Get it started         | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> | some example notes
 |                        |                   |                |       |
-| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | need to check for conflicts with Node.js & NGINX reverse proxy
+| Python env setup (dev) | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | conflicts with Node & NGINX proxy?
 |                        |                   |                |       |
-| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+| Python env setup (prd) | <ul><li>- [x] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 
 
 <br><br>
