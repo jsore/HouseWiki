@@ -50,7 +50,20 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
     + grouped by section, organized by highest rank to least
     + sidebar of top 3
 
+<br>
 
+  - [ ] General wish list for what we want in a house and community
+
+<br>
+
+  - [ ] A secure place for document storage
+
+<br>
+
+  - [ ] Contacts section
+    + unordered list format
+    + names of people and what they're supposed to help with
+    + should actual contact info be listed or not?
 
 
 
@@ -91,7 +104,7 @@ __Questions__
 
   - Cheri: is the community USDA?
 
-  - What's the ( more descriptive ) time line of house approval - house built - house move-in ready
+  - What's the ( more descriptive ) time line of house approval - house built - house move-in ready? What about the community? ( ex: Aubrey @ 8 months vs. Princeton @ 2/3 months )
 
 
 <br><br>
@@ -101,7 +114,7 @@ __House TODO's__
 
   - [ ] Look up school ratings in Princeton vs. Aubrey
   - [ ] Organize documents and notes from DR Horton folders
-  - [ ] Programmatic approach to tracking _<b>all</b> of this_
+  - [x] Programmatic approach to tracking _<b>all</b> of this_
 
 
 </details>
