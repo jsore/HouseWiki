@@ -84,49 +84,17 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 --------------------------------------------------------------------------------------------------
 ### Project status updates & roadblocks
 
+
   > 'Status' is 'pending' and 'in progress' by default
 
-| Item                   | Type              | Status         |
-|------------------------|-------------------|----------------|
-| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-|                        |                   |                |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
-
 
 | Item                   | Type              | Status         | Notes |
 |------------------------|-------------------|----------------|-------|
-| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> |
+| Get it started         | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> | README done-ish
 |                        |                   |                |       |
-| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+| Python env setup (dev) | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | virtual env `house-wiki` created/sourced
 |                        |                   |                |       |
-| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
-|                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
-|                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
-|                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
-|                        |                   |                |       |
-|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
-
-
-| Item                   | Type              | Status         | Notes |
-|------------------------|-------------------|----------------|-------|
-| Get it started         | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> | some example notes
-|                        |                   |                |       |
-| Python env setup (dev) | <ul><li>- [ ] block</li><li>- [x] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | conflicts with Node & NGINX proxy?
-|                        |                   |                |       |
-| Python env setup (prd) | <ul><li>- [x] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+| Python env setup (prd) | <ul><li>- [x] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | conflicts with Node & NGINX proxy?
 |                        |                   |                |       |
 |                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
@@ -140,10 +108,18 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br><br>
 
 
-___Project notes__
+__Project notes__
 
+  1. Python env
 
+  indented space under number
 
+  2. Python env
+  indented no space under number
+
+  3. Python env
+
+not indented
 
 
 
@@ -230,6 +206,8 @@ __Questions for each visited lender/house/community__
 __General Questions__
 
   - ( For DR Horton ) What are the HBC milestones? What're you looking for when reviewing banking/financial records? Any specificities we need to be aware of for obtaining approval?
+
+  - ( For DR Horton ) Tech specs for smarthome installations? ( Justin is the interested party with this )
 
   - We've seen Princeton and Aubrey. Are there any other communities near or in between that'd be cheaper?
 
