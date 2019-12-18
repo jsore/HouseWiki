@@ -3,19 +3,7 @@
 For the wife and I, an attempt to keep our sanity in check during our house buying process.
 
 
-
-
-
-
-
-
-<br><br><br><br>
-
-
-
-
-
-
+<br>
 
 
 --------------------------------------------------------------------------------------------------
@@ -96,6 +84,8 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 --------------------------------------------------------------------------------------------------
 ### Project status updates & roadblocks
 
+  > 'Status' is 'pending' and 'in progress' by default
+
 | Item           | Type              | Status         |
 |----------------|-------------------|----------------|
 | Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
@@ -105,9 +95,6 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 |                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
 |                |                   |                |
 |                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
-
-
-  > 'Status' is 'pending' and 'in progress' by default
 
 
 
