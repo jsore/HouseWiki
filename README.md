@@ -13,6 +13,18 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
 <br>
 
+  - [ ] User accounts
+    + Django admin, Justin, Tiffany, guest ( in case anyone else wants to see )
+    + persist logins across devices ( cookies? )
+    + restrict adding comments until logged in
+      * put a 'log in to post comments' placeholder for non-authed visitors?
+      + restrict guest account from commenting?
+      * don't even allow non-authed visitors from accessing _anything_? ( splashpage on load )
+
+
+<br>
+
+
   - [ ] Milestones
     + track list format
     + provide a `textarea` for comments regarding how the milestone was accomplished
@@ -96,7 +108,7 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 |                        |                   |                |       |
 | Python env setup (prd) | <ul><li>- [x] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | conflicts with Node & NGINX proxy?
 |                        |                   |                |       |
-|                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+| Wiki styling (jsore?)  | <ul><li>- [x] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | share CSS with base site? Just head/foot?
 |                        |                   |                |       |
 |                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 |                        |                   |                |       |
@@ -120,6 +132,12 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
 __Python env__
 
+My main programming experience has been vanilla ES5/6 JavaScript ( plus all the stuff required for server administration/DNS/website hosting on a Node.js + NGINX or Apache platform ). I'm not new to Python but I am still a novice, specifically when speaking about Django's supplied libraries and methodologies. I'm going to migrate this wiki to my domain eventually and will need to know about any clashes between my Node/PM2 site with this, and will need to research how to join this wiki and it's Python based code with my existing reverse proxy.
+
+Eventually I want to migrate my existing site to pure Python. There will be some headaches so hopefully if I keep decent records of what I do before pushing to prod it'll help.
+
+<br>
+
   ```
   …/HouseWiki$ mkdir env
 
@@ -127,7 +145,7 @@ __Python env__
 
   …/HouseWiki$ source env/house-wiki/bin/activate
 
-  …/HouseWiki$ pip install Django
+  …/HouseWiki$ pip install Django  # remember to verify installation
   …/HouseWiki$ python
   >>> import django
   >>> django.get_version()
@@ -167,7 +185,9 @@ Click to expand me.
 
 __General knowledge, tips__
 
-  - You can apply to other lenders within 15 days without impacting credit
+  - You can apply to other lenders within ~~15~~ 14 days without impacting credit
+  - Insurance: make sure we have __replacement__ cost, not depreciation cost
+  - This: `https://www.dhititle.com/Buyer-Resource-Center`
 
 
 <br><br>
@@ -219,6 +239,8 @@ __Questions for each visited lender/house/community__
 
 
 __General Questions__
+
+  - ( For HBC ) I want to refinance my car. Good idea or bad?
 
   - ( For DR Horton ) What are the HBC milestones? What're you looking for when reviewing banking/financial records? Any specificities we need to be aware of for obtaining approval?
 
