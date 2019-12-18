@@ -21,7 +21,21 @@ For the wife and I, an attempt to keep our sanity in check during our house buyi
 --------------------------------------------------------------------------------------------------
 ### Wiki structure
 
-It should:
+What this repo accomplishes. It should be able to do or track:
+
+<br>
+
+  - [ ] Milestones
+    + track list format
+    + provide a `textarea` for comments regarding how the milestone was accomplished
+
+<br>
+
+  - [ ] Questions we have that need to be answered
+    + unordered list format
+    + make them answerable
+    + flag them as 'answered' if answered
+
 
 
 
