@@ -86,15 +86,63 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
   > 'Status' is 'pending' and 'in progress' by default
 
-| Item           | Type              | Status         |
-|----------------|-------------------|----------------|
-| Get it started | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
-|                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
-|                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
-|                |                   |                |
-|                | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] finished</li><li>- [ ] ignored</li></ul>
+| Item                   | Type              | Status         |
+|------------------------|-------------------|----------------|
+| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+|                        |                   |                |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul>
+
+
+| Item                   | Type              | Status         | Notes |
+|------------------------|-------------------|----------------|-------|
+| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+
+
+| Item                   | Type              | Status         | Notes |
+|------------------------|-------------------|----------------|-------|
+| Get it started         | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [x] complete</li><li>- [ ] ignored</li></ul> | some example notes
+|                        |                   |                |       |
+| Python env setup (dev) | <ul><li>- [ ] roadblock</li><li>- [x] action item</li><li>- [ ] other</li></ul> | <ul><li>- [x] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> | need to check for conflicts with Node.js & NGINX reverse proxy
+|                        |                   |                |       |
+| Python env setup (prd) | <ul><li>- [x] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+|                        |                   |                |       |
+|                        | <ul><li>- [ ] roadblock</li><li>- [ ] action item</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
+
+
+<br><br>
+
+
+___Project notes__
+
+
 
 
 
