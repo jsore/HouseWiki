@@ -256,6 +256,8 @@ __Wish List__
 
  - [ ] Good lighting
  - [ ] Good fixtures
+ - [ ] __Extra living area__ ( gameroom/bonus room )
+ - [ ] __Office space__
 
 <br><br>
 
