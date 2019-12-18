@@ -277,6 +277,40 @@ Then spin up the dev server. Remember: use WSGI for prod and Django can run the 
 
 
 
+<br><br>
+
+
+
+
+Now it's just a case of building the models. Got a few of them done so far. General process:
+
+  1. Create the models to define database management details
+
+  From the 'What this project should accomplish section', each item needs a model. This defines how data related to each item is manipulated or presented in the DB.
+
+
+  2. Add the models to Django's admin site for each project app
+
+  Example, the `home` application's admin rules get defined here:
+
+  `…/HouseWiki/housewiki/home/admin.py`
+
+
+  3. Create the application's views
+
+  Define how the data from each model should be rendered to a user on a webpage
+
+
+  4. Define a URL pattern for each view
+
+  Endpoints to determine where to take the user based on the URL path
+
+
+  5. Write the template for each view
+
+  This is the HTML that takes attributes passed to it from the view and defines how to display them
+
+
 
 
 
