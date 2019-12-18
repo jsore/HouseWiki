@@ -14,12 +14,18 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] Milestones
+    + [x] model
+    + [ ] view
+    + [ ] template
     + format: checkbox list
     + provide a `textarea` for comments regarding how the milestone was accomplished
 
 <br>
 
   - [ ] Questions we have that need to be answered
+    + [x] model
+    + [ ] view
+    + [ ] template
     + format: unordered list
     + make them answerable
     + flag them as 'answered' if answered
@@ -27,6 +33,9 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] Houses section
+    + [ ] model
+    + [ ] view
+    + [ ] template
     + format: unordered list, but with a 'ranking' option in the list ( 1 to 3 stars )
     + under each house in the aggregated list of houses and within each house:
       * description of house layout and provide an option to bold any specific description ( for favorites ) and an option of making the text red ( for specific dislikes )
@@ -41,6 +50,9 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] General wish list for what we want in a house and community
+    + [ ] model
+    + [ ] view
+    + [ ] template
     + format: ordered list
     + items should be able to be ranked favorite to least
     + provide an option to 'flag' the wish as a must or absolute favorite ( bold/red, etc etc )
@@ -48,16 +60,25 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] General knowledge/home buying tips we want to record
+    + [ ] model
+    + [ ] view
+    + [ ] template
     + format: unordered list
 
 <br>
 
   - [ ] Section to record things to consider during purchasing process
+    + [ ] model
+    + [ ] view
+    + [ ] template
     + format: unordered list
 
 <br>
 
   - [ ] Contacts section
+    + [ ] model
+    + [ ] view
+    + [ ] template
     + format: unordered list
     + names of people and what they're supposed to help with
     + should actual contact info be listed or not?

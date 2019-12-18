@@ -60,6 +60,6 @@ class Question(models.Model):
     QUESTION_STATUS_CHOICES = (('answered', 'Answered'),
                                ('unanswered', 'Unanswered'))
     title = models.CharField(max_length=250)
-    supplemental_example = models.TextField()
-    answer = models.TextField()
+    supplemental_example = models.TextField(null=True, blank=True)
+    answer = models.TextField(null=True, blank=True)
     answered = models.BooleanField(default=False)
