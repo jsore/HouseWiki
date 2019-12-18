@@ -13,33 +13,21 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 
 <br>
 
-  - [ ] User accounts
-    + Django admin, Justin, Tiffany, guest ( in case anyone else wants to see )
-    + persist logins across devices ( cookies? )
-    + restrict adding comments until logged in
-      * put a 'log in to post comments' placeholder for non-authed visitors?
-      + restrict guest account from commenting?
-      * don't even allow non-authed visitors from accessing _anything_? ( splashpage on load )
-
-
-<br>
-
-
   - [ ] Milestones
-    + track list format
+    + format: checkbox list
     + provide a `textarea` for comments regarding how the milestone was accomplished
 
 <br>
 
   - [ ] Questions we have that need to be answered
-    + unordered list format
+    + format: unordered list
     + make them answerable
     + flag them as 'answered' if answered
 
 <br>
 
   - [ ] Houses section
-    + unordered list format, but with a 'ranking' option in the list ( 1 to 3 stars )
+    + format: unordered list, but with a 'ranking' option in the list ( 1 to 3 stars )
     + under each house in the aggregated list of houses and within each house:
       * description of house layout and provide an option to bold any specific description ( for favorites ) and an option of making the text red ( for specific dislikes )
       * section for specific likes and dislikes with optional area for elaborating
@@ -53,29 +41,54 @@ What this repo accomplishes. It should be able to do, provide a space for, or tr
 <br>
 
   - [ ] General wish list for what we want in a house and community
-    + ordered list
+    + format: ordered list
     + items should be able to be ranked favorite to least
     + provide an option to 'flag' the wish as a must or absolute favorite ( bold/red, etc etc )
 
 <br>
 
   - [ ] General knowledge/home buying tips we want to record
+    + format: unordered list
 
 <br>
 
-  - [ ] A secure place for document storage
+  - [ ] Section to record things to consider during purchasing process
+    + format: unordered list
 
 <br>
 
   - [ ] Contacts section
-    + unordered list format
+    + format: unordered list
     + names of people and what they're supposed to help with
     + should actual contact info be listed or not?
 
 <br>
 
-  - [ ] Written in Python + Django because I need live practice with them
+  - [x] Written in Python + Django because I need live practice with them
     + will there be any problems with this being Python based vs. my site which is Node.js? ( specifically regarding my SSL certs and/or NGINX reverse proxy )
+
+<br>
+
+  - [ ] A secure place for document storage
+    + format: blob storage with Postgres?
+    + reference in the DB to file paths or raw files in DB?
+
+<br>
+
+  - [ ] Determine domain structure
+    + subdomain or subpath?
+    + remember to consider SSL certs and DNS for subdomain
+
+<br>
+
+  - [ ] User accounts
+    + Django admin, Justin, Tiffany, guest ( in case anyone else wants to see )
+    + persist logins across devices ( cookies? )
+    + restrict adding comments until logged in
+      * put a 'log in to post comments' placeholder for non-authed visitors?
+      * restrict guest account from commenting?
+      * don't even allow non-authed visitors from accessing _anything_? ( splashpage on load )
+      * option to register as a user?
 
 
 
