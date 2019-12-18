@@ -138,6 +138,8 @@ Eventually I want to migrate my existing site to pure Python. There will be some
 
 <br>
 
+Init setup:
+
   ```
   …/HouseWiki$ mkdir env
 
@@ -195,6 +197,7 @@ __General knowledge, tips__
 
 __Things we need to remember to consider__
 
+  - Preliminary estimates for house approval upper end: __$240k-$250k__
   - Toll cost
   - Crime rate
   - Traffic
