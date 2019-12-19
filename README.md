@@ -14,9 +14,22 @@ Just some things I thought to ask or do while thinking up this project.
 
 <br><br>
 
+```diff
+@@        Note: This is not the final product        @@
+```
 
+  > _This page and repo only exists to help keep track of my code<br>
+  > and thoughts from my wife & I._
+  >
+  > _Once complete, the Wiki will be linked here and will replace<br>
+  > all the notes under the 'Things To Add To The Wiki' section._
+  >
+  > _Items with a strikethrough ( ~~like this~~ ) have already been<br>
+  > added to the forthcoming Wiki database._
 
-@@Note: Any items with a strikethrough ( ~~like this~~ ) have already been added to the Wiki, which is the site this project will produce.@@ This specific page _is not_ the final product, it only exists to help keep track of my code and thoughts from my wife & I.
+```diff
+@@        This project and all its info be compiled into a Wiki        @@
+```
 
 
 <br><br>
