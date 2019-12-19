@@ -57,13 +57,13 @@ __General knowledge, tips__
 
 __Things we need to remember to consider__
 
-  - Preliminary estimates for house approval upper end: __$240k-$250k__
-  - Toll cost
-  - Crime rate
-  - Traffic
-  - School district
-  - ( petty ) Sun in eyes during commute or at your back?
-  - Cable/internet/electric companies for the area
+  - ~~Preliminary estimates for house approval upper end: __$240k-$250k__~~
+  - ~~Toll cost~~
+  - ~~Crime rate~~
+  - ~~Traffic~~
+  - ~~School district~~
+  - ~~( petty ) Sun in eyes during commute or at your back?~~
+  - ~~Cable/internet/electric companies for the area~~
 
 
 <br><br>
@@ -239,9 +239,9 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 <br>
 
   - [ ] General knowledge/home buying tips we want to record
-    + [ ] dashboard view
-    + [ ] dashboard template
-    + [ ] model
+    + [x] dashboard view
+    + [x] dashboard template
+    + [x] model
     + [ ] view
     + [ ] template
     + format: unordered list
@@ -249,9 +249,9 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 <br>
 
   - [ ] Section to record things to consider during purchasing process
-    + [ ] dashboard view
-    + [ ] dashboard template
-    + [ ] model
+    + [x] dashboard view
+    + [x] dashboard template
+    + [x] model
     + [ ] view
     + [ ] template
     + format: unordered list

@@ -7,40 +7,81 @@
 {% block content %}
   <h1>Dashboard</h1>
   <h2>Wiki Overview</h2>
+  <p class="explain-section">Review a consolidated list of items from each of this project's sections.</p>
 
-  <h3>Milestones</h3>{# <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}">See all milestones...</a> #}
-  <p>What we need to or already have accomplished.</p>
-  <ul>
-    {% for milestone in milestone_list %}
-      <li>
-        {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
-        {{ milestone.title }}
-        {# </a> #}
-      </li>
-    {% endfor %}
-    <li>…</li>
-  </ul>
-  <p><a href="{{ request.protocol }}{{ request.host }}{{ milestones }}">See all Milestones</a></p>
+  <div class="list-container">
+    <h3 class="list-container-heading">
+      <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-link">
+        Milestones <span class="heading-a-link">See all</span>
+      </a>
+    </h3>
+    <p class="explain-section">What we need to or already have accomplished.</p>
+    <ul class="list-ul-container">
+      {% for milestone in milestone_list %}
+        <li class="list-item">
+          {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
+          {{ milestone.title }}
+          {# </a> #}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-  <h3>Questions</h3>
-  <p>What we want to know about home buying.</p>
-  <ul>
-    {% for question in question_list %}
-      <li>{{ question.title }}</li>
-    {% endfor %}
-    <li>…</li>
-  </ul>
-  <p><a href="{{ request.protocol }}{{ request.host }}{{ questions }}">See all Questions</a></p>
+  <div class="list-container">
+    <h3 class="list-container-heading">
+      <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link">
+        Questions <span class="heading-a-link">See all</span>
+      </a>
+    </h3>
+    <p class="explain-section">What we want to know about home buying.</p>
+    <ul class="list-ul-container">
+      {% for question in question_list %}
+        <li class="list-item">{{ question.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
 
-  <h3>Wish List</h3>
-  <p>What traits we want in a property.</p>
-  <ul>
-    {% for wish in wishlist_list %}
-      <li>{{ wish.wish }}</li>
-    {% endfor %}
-    <li>…</li>
-  </ul>
-  <p><a href="{{ request.protocol }}{{ request.host }}{{ wishes }}">See all Wish List items</a></p>
+  <div class="list-container">
+    <h3 class="list-container-heading">
+      <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-link">
+        Wish List <span class="heading-a-link">See all</span>
+      </a>
+    </h3>
+    <p class="explain-section">What traits we want in a property.</p>
+    <ul class="list-ul-container">
+      {% for wish in wishlist_list %}
+        <li class="list-item">{{ wish.wish }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="list-container">
+    <h3 class="list-container-heading">
+      <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-link">
+        Knowledge &amp; Tips <span class="heading-a-link">See all</span>
+      </a>
+    </h3>
+    <p class="explain-section">What we've learned and need to remember.</p>
+    <ul class="list-ul-container">
+      {% for tip in knowledge_and_tips_list %}
+        <li class="list-item">{{ tip.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="list-container">
+    <h3 class="list-container-heading">
+      <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
+        Things To Consider <span class="heading-a-link">See all</span>
+      </a>
+    </h3>
+    <p class="explain-section">What we want to keep in mind while house hunting.</p>
+    <ul class="list-ul-container">
+      {% for thing in things_to_consider_list %}
+        <li class="list-item">{{ thing.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock content %}
 
 

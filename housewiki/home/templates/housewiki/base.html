@@ -20,6 +20,35 @@
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
       {# <h3>Most Recently Asked Questions</h3> #}
       {# {% show_latest_questions 3 %} #}
+      <ul>
+
+      </ul>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-link">
+            Milestones
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link">
+            Questions
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-link">
+            Wish List
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-link">
+            Knowledge &amp; Tips
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
+            Things To Consider
+          </a>
+        </li>
+
       <h3>Favorite Properties</h3>
       {# {% get_favorite_properties as favorite_properties %} #}
       <ul>

@@ -11,18 +11,18 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView
 
-from .models import Milestone, Question, WishList
+from .models import Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
 
 
 def dashboard(request):
 
     # grab all of our objects for an overview
-    #milestone_list = Milestone.objects.al()
-    #question_list = Question.objects.all()
-    #wishlist_list = WishList.objects.all()
-    milestone_list = Milestone.objects.order_by('-created')[:5]
-    question_list = Question.objects.order_by('-created')[:5]
-    wishlist_list = WishList.objects.order_by('-created')[:5]
+    milestone_list = Milestone.objects.order_by('-created')[:3]
+    question_list = Question.objects.order_by('-created')[:3]
+    wishlist_list = WishList.objects.order_by('-created')[:3]
+    knowledge_and_tips_list = KnowledgeAndTips.objects.order_by('-created')[:3]
+    things_to_consider_list = ThingsToConsider.objects.order_by('-created')[:3]
+
 
 
     # instantiate Paginator class with the number of objects
@@ -46,7 +46,9 @@ def dashboard(request):
                   'housewiki/dashboard/index.html',
                   {'milestone_list': milestone_list,
                    'question_list': question_list,
-                   'wishlist_list': wishlist_list})
+                   'wishlist_list': wishlist_list,
+                   'things_to_consider_list': things_to_consider_list,
+                   'knowledge_and_tips_list': knowledge_and_tips_list})
 
 
 def all_milestones(request):

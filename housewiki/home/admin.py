@@ -6,7 +6,7 @@
 from django.contrib import admin
 
 # register models with the admin site
-from .models import Milestone, Question, WishList
+from .models import Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
 
 
 # use a decorator instead of admin.site.register(<Model>)
@@ -67,3 +67,23 @@ class WishListAdmin(admin.ModelAdmin):
     list_filter = ('ranking',)
     search_fields = ('title', 'ranking')
     prepopulated_fields =  {'slug': ('wish',)}
+
+
+@admin.register(KnowledgeAndTips)
+class KnowledgeAndTipsAdmin(admin.ModelAdmin):
+    list_display = ('title',
+                    'slug',
+                    'created')
+    list_filter = ('created',)
+    search_fields = ('title', 'created')
+    prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(ThingsToConsider)
+class ThingsToConsiderAdmin(admin.ModelAdmin):
+    list_display = ('title',
+                    'slug',
+                    'created')
+    list_filter = ('created',)
+    search_fields = ('title', 'created')
+    prepopulated_fields = {'slug': ('title',)}
