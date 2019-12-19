@@ -1,3 +1,8 @@
+"""
+…/HouseWiki/housewiki/home/admin.py
+"""
+
+
 from django.contrib import admin
 
 # register models with the admin site
@@ -15,14 +20,14 @@ class MilestoneAdmin(admin.ModelAdmin):
                     'slug',
                     'comment',
                     'created',
-                    #'reached_date',
+                    ##'reached_date',
                     'updated',
-                    #'reached',
+                    ##'reached',
                     'status')
 
     # filter-by sidebar
-    list_filter = (#'reached',
-                   #'reached_date',
+    list_filter = (##'reached',
+                   ##'reached_date',
                    'status',)
 
     # search bar
@@ -34,11 +39,11 @@ class MilestoneAdmin(admin.ModelAdmin):
     raw_id_field = ('creator')
 
     # nav links to run through milestones by date
-    # date_hierarchy = 'reached_date'
+    ##date_hierarchy = 'reached_date'
 
-    ordering = ('status',
-                #'reached_date'
-                )
+    ordering = (##'reached_date',
+                'status',)
+
 
 
 @admin.register(Question)
@@ -51,6 +56,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ('answered',)
     search_fields = ('title', 'supplemental_example', 'answer')
     prepopulated_fields =  {'slug': ('title',)}
+
 
 
 @admin.register(WishList)

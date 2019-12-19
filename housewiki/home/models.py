@@ -1,7 +1,16 @@
+"""
+…/HouseWiki/housewiki/home/models.py
+"""
+
+
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth.models import User
+
+
+# def get_absolute_url(list_name):
+    # return reverse(f'housewiki:')
 
 
 # each attribute in each defined class will have a table
@@ -17,10 +26,10 @@ class Milestone(models.Model):
     title = models.CharField(max_length=250)
 
     slug = models.SlugField(max_length=250,
-                            #unique_for_date='Reached'
+                            ##unique_for_date='Reached'
                             unique=True)
 
-    ## create a foreign key in DB using primary key of User
+    # create a foreign key in DB using primary key of User
     creator = models.ForeignKey(User,
                                 # required but also SQL standard
                                 # delete Milestones on user delete
@@ -32,7 +41,7 @@ class Milestone(models.Model):
     comment = models.TextField(null=True,
                                blank=True)
 
-    # reached_date = models.DateTimeField(default=timezone.now)
+    ##reached_date = models.DateTimeField(default=timezone.now)
 
     # saves the date automatically when creating an object
     created = models.DateTimeField(auto_now_add=True)
@@ -44,7 +53,7 @@ class Milestone(models.Model):
                               choices=MILESTONE_STATUS_CHOICES,
                               default='not reached')
 
-    # reached = models.BooleanField(default=False)
+    ##reached = models.BooleanField(default=False)
 
     class Meta:
         # recent to oldest when querying DB
@@ -54,16 +63,22 @@ class Milestone(models.Model):
     def __str__(self):
         return self.title
 
+    # def get_absolute_url(self):
+    #     return reverse('housewiki:')
+
+
 
 class Question(models.Model):
 
     QUESTION_STATUS_CHOICES = (('answered', 'Answered'),
                                ('unanswered', 'Unanswered'))
+
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     supplemental_example = models.TextField(null=True, blank=True)
     answer = models.TextField(null=True, blank=True)
     answered = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ('answered',)
@@ -72,15 +87,19 @@ class Question(models.Model):
         return self.title
 
 
+
 class WishList(models.Model):
 
     WISH_RANKING_CHOICES = (('dealbreaker', 'Dealbreaker'),
+                            ('very important', 'Very Important'),
                             ('important', 'Important'),
                             ('kind of important', 'Kind of Important'),
                             ('almost petty', 'Almost Petty'),
                             ('definitely petty', 'Definitely Petty'))
+
     wish = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     ranking = models.CharField(max_length=20,
                                choices=WISH_RANKING_CHOICES,

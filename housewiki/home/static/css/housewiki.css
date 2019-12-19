@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, sans-serif;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+#content {
+  float: left;
+  width: 60%;
+  padding: 0 0 0 30px;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background: #efefef;
+  padding: 10px;
+}

@@ -1,4 +1,7 @@
-"""housewiki URL Configuration
+"""
+…/HouseWiki/housewiki/housewiki/urls.py
+
+housewiki project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -23,5 +26,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # path('home/', include('home.urls')),
+    ##path('home/', include('home.urls')),
+    path('housewiki/', include('home.urls')),
 ]

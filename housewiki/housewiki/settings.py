@@ -1,4 +1,6 @@
 """
+…/HouseWiki/housewiki/housewiki/settings.py
+
 Django settings for housewiki project.
 
 About this file:

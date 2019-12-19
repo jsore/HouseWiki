@@ -1,0 +1,46 @@
+{# …/HouseWiki/housewiki/home/templates/housewiki/dashboard/index.html #}
+
+{% extends "housewiki/base.html" %}
+
+{% block title %}Dashboard{% endblock title %}
+
+{% block content %}
+  <h1>Dashboard</h1>
+  <h2>Wiki Overview</h2>
+
+  <h3>Milestones</h3>{# <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}">See all milestones...</a> #}
+  <p>What we need to or already have accomplished.</p>
+  <ul>
+    {% for milestone in milestone_list %}
+      <li>
+        {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
+        {{ milestone.title }}
+        {# </a> #}
+      </li>
+    {% endfor %}
+    <li>…</li>
+  </ul>
+  <p><a href="{{ request.protocol }}{{ request.host }}{{ milestones }}">See all Milestones</a></p>
+
+  <h3>Questions</h3>
+  <p>What we want to know about home buying.</p>
+  <ul>
+    {% for question in question_list %}
+      <li>{{ question.title }}</li>
+    {% endfor %}
+    <li>…</li>
+  </ul>
+  <p><a href="{{ request.protocol }}{{ request.host }}{{ questions }}">See all Questions</a></p>
+
+  <h3>Wish List</h3>
+  <p>What traits we want in a property.</p>
+  <ul>
+    {% for wish in wishlist_list %}
+      <li>{{ wish.wish }}</li>
+    {% endfor %}
+    <li>…</li>
+  </ul>
+  <p><a href="{{ request.protocol }}{{ request.host }}{{ wishes }}">See all Wish List items</a></p>
+{% endblock content %}
+
+

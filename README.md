@@ -188,6 +188,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
   - [ ] Milestones
     + [x] model
+    + [x] dashboard view
+    + [x] dashboard template
     + [ ] view
     + [ ] template
     + format: checkbox list
@@ -197,6 +199,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
   - [ ] Questions we have that need to be answered
     + [x] model
+    + [x] dashboard view
+    + [x] dashboard template
     + [ ] view
     + [ ] template
     + format: unordered list
@@ -224,6 +228,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
   - [ ] General wish list for what we want in a house and community
     + [x] model
+    + [x] dashboard view
+    + [x] dashboard template
     + [ ] view
     + [ ] template
     + format: ordered list
@@ -233,6 +239,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 <br>
 
   - [ ] General knowledge/home buying tips we want to record
+    + [ ] dashboard view
+    + [ ] dashboard template
     + [ ] model
     + [ ] view
     + [ ] template
@@ -241,6 +249,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 <br>
 
   - [ ] Section to record things to consider during purchasing process
+    + [ ] dashboard view
+    + [ ] dashboard template
     + [ ] model
     + [ ] view
     + [ ] template
@@ -269,7 +279,7 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
 <br>
 
-  - [ ] Determine domain structure
+  - [x] Determine domain structure
     + subdomain or subpath?
     + remember to consider SSL certs and DNS for subdomain
 
