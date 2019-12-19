@@ -15,6 +15,21 @@ Just some things I thought to ask or do while thinking up this project.
 <br><br>
 
 
+
+@@Note: Any items with a strikethrough ( ~~like this~~ ) have already been added to the Wiki, which is the site this project will produce.@@ This specific page _is not_ the final product, it only exists to help keep track of my code and thoughts from my wife & I.
+
+
+<br><br>
+
+
+__Milestones__
+
+  - ~~Get physically moved into the house~~
+
+
+<br><br>
+
+
 __General knowledge, tips__
 
   - You can apply to other lenders within ~~15~~ 14 days without impacting credit
@@ -22,6 +37,7 @@ __General knowledge, tips__
   - This: `https://www.dhititle.com/Buyer-Resource-Center`
   - ** notes from picture from tiff in messenger Dec 18th ~12:40pm **
   - ** notes from the rest of the folder's docs **
+
 
 <br><br>
 
@@ -82,11 +98,11 @@ __General Questions__
 
   - We've seen Princeton and Aubrey. Are there any other communities near or in between that'd be cheaper?
 
-  - Whats the inspection process like?
+  - ~~Whats the inspection process like?~~
 
   - When we sign a purchase agreement does that lock in the price of the home? ( ex: we give the deposit now to hold a spot while we work on fixing credit and don't sign on a house until xx months later )
 
-  - Can you make additional upgrades once the home started? Any limits on that? ( i.e. nothing structural, etc etc )
+  - ~~Can you make additional upgrades once the home started? Any limits on that? ( i.e. nothing structural, etc etc )~~
 
   - What is a PID community/neighborhood? Why should we like/dislike it? ( Procure documentation from Cheri, Princeton is PID )
 
@@ -110,10 +126,10 @@ __General Questions__
 
 __Wish List__
 
- - Good lighting
- - Good fixtures
- - __Extra living area__ ( gameroom/bonus room )
- - __Office space__
+ - ~~Good lighting~~
+ - ~~Good fixtures~~
+ - ~~__Extra living area__ ( gameroom/bonus room )~~
+ - ~~__Office space__~~
 
 <br><br>
 
@@ -272,7 +288,7 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
 
 --------------------------------------------------------------------------------------------------
-### Project status updates & roadblocks
+### Project Status Updates & Roadblocks
 
 More technical aspects detailing the project's current status.
 
@@ -281,6 +297,7 @@ More technical aspects detailing the project's current status.
 <summary>Click me to expand and view this section.</summary>
 
 
+<br><br>
 
 
   > 'Status' is 'pending' and 'in progress' by default
@@ -303,9 +320,22 @@ More technical aspects detailing the project's current status.
 |                        | <ul><li>- [ ] block</li><li>- [ ] TODO</li><li>- [ ] other</li></ul> | <ul><li>- [ ] current</li><li>- [ ] complete</li><li>- [ ] ignored</li></ul> |
 
 
-<br><br>
 
 
+
+
+
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------
 ### Supplemental project notes to track for sanity
 
   > https://github.com/jsore/notes
@@ -436,29 +466,29 @@ Then spin up the dev server. Remember: use WSGI for prod and Django can run the 
 
 Now it's just a case of building the models. Got a few of them done so far. General process:
 
-  1. Create the models to define database management details
+  __1. Create the models to define database management details__
 
   From the 'What this project should accomplish section', each item needs a model. This defines how data related to each item is manipulated or presented in the DB.
 
 
-  2. Add the models to Django's admin site for each project app
+  __2. Add the models to Django's admin site for each project app__
 
   Example, the `home` application's admin rules get defined here:
 
   `…/HouseWiki/housewiki/home/admin.py`
 
 
-  3. Create the application's views
+  __3. Create the application's views__
 
   Define how the data from each model should be rendered to a user on a webpage
 
 
-  4. Define a URL pattern for each view
+  __4. Define a URL pattern for each view__
 
   Endpoints to determine where to take the user based on the URL path
 
 
-  5. Write the template for each view
+  __5. Write the template for each view__
 
   This is the HTML that takes attributes passed to it from the view and defines how to display them
 
