@@ -17,11 +17,11 @@ from .models import Milestone, Question, WishList, KnowledgeAndTips, ThingsToCon
 def dashboard(request):
 
     # grab all of our objects for an overview
-    milestone_list = Milestone.objects.order_by('-created')[:3]
-    question_list = Question.objects.order_by('-created')[:3]
-    wishlist_list = WishList.objects.order_by('-created')[:3]
-    knowledge_and_tips_list = KnowledgeAndTips.objects.order_by('-created')[:3]
-    things_to_consider_list = ThingsToConsider.objects.order_by('-created')[:3]
+    milestone_list = Milestone.objects.order_by('-created')[:1]
+    question_list = Question.objects.order_by('-created')[:1]
+    wishlist_list = WishList.objects.order_by('-created')[:1]
+    knowledge_and_tips_list = KnowledgeAndTips.objects.order_by('-created')[:1]
+    things_to_consider_list = ThingsToConsider.objects.order_by('-created')[:1]
 
 
 

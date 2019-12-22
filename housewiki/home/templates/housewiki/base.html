@@ -9,7 +9,7 @@
     <link href="{% static 'css/housewiki.css' %}" rel="stylesheet">
   </head>
   <body>
-
+    <div id="parent-wrapper">
     <div id="content">
       {% block content %}
       {% endblock content %}
@@ -20,9 +20,9 @@
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
       {# <h3>Most Recently Asked Questions</h3> #}
       {# {% show_latest_questions 3 %} #}
-      <ul>
+      <ul class="nav-links">
 
-      </ul>
+
         <li class="sidebar-li">
           <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-link">
             Milestones
@@ -48,8 +48,9 @@
             Things To Consider
           </a>
         </li>
+      </ul>
 
-      <h3>Favorite Properties</h3>
+      <h3 class="hidden-h3">Favorite Property</h3>
       {# {% get_favorite_properties as favorite_properties %} #}
       <ul>
         {% for property in favorite_properties %}
@@ -58,6 +59,8 @@
           </li>
         {% endfor %}
       </ul>
+    </div>
+
     </div>
   </body>
 </html>
