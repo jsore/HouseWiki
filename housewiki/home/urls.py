@@ -3,7 +3,7 @@
 """
 
 
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 
@@ -16,4 +16,5 @@ urlpatterns = [
 
     # path takes no args and is mapped to 'dashboard' view
     path('', views.dashboard, name='dashboard'),
+    # path('', include(views.dashboard, views.HousePicturesView), name='dashboard'),
 ]

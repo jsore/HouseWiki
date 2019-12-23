@@ -130,3 +130,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# use django standard nomenclature for name of directory 'media'
+# absolute filesystem path to dir for user-uploaded images
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# URL to be used in templates
+MEDIA_URL = '/media/'

@@ -1,0 +1,9 @@
+{% extends "housewiki/base.html" %}
+
+<ul>
+      {% for property in object_list %}
+        {# <h4>{{ property.class_string }}</h4> #}
+        <h4>{{ property.floorplan_name }}</h4>
+        <li><img src="{{ property.cover.url }}" alt="{{ property.floorplan_name }}"></li>
+      {% endfor %}
+    </ul>

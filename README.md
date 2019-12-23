@@ -211,9 +211,11 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
   - [ ] Houses section
     + [ ] model
+    + [ ] dashboard view
+    + [ ] dashboard template
     + [ ] view
     + [ ] template
-    + format: unordered list, but with a 'ranking' option in the list ( 1 to 3 stars )
+    + format: unordered list, but with a 'ranking' option in the list ( 1 to ~~3~~ 4 'stars' )
     + under each house in the aggregated list of houses and within each house:
       * description of house layout and provide an option to bold any specific description ( for favorites ) and an option of making the text red ( for specific dislikes )
       * section for specific likes and dislikes with optional area for elaborating

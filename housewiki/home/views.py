@@ -11,7 +11,7 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView
 
-from .models import Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
+from .models import Property, Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
 
 
 def dashboard(request):
@@ -22,7 +22,7 @@ def dashboard(request):
     wishlist_list = WishList.objects.order_by('-created')[:1]
     knowledge_and_tips_list = KnowledgeAndTips.objects.order_by('-created')[:1]
     things_to_consider_list = ThingsToConsider.objects.order_by('-created')[:1]
-
+    property_list = Property.objects.order_by('ranking')
 
 
     # instantiate Paginator class with the number of objects
@@ -44,7 +44,8 @@ def dashboard(request):
 
     return render(request,
                   'housewiki/dashboard/index.html',
-                  {'milestone_list': milestone_list,
+                  {'property_list': property_list,
+                   'milestone_list': milestone_list,
                    'question_list': question_list,
                    'wishlist_list': wishlist_list,
                    'things_to_consider_list': things_to_consider_list,
@@ -58,6 +59,11 @@ def all_milestones(request):
     paginate_by = 25
     template_name = 'housewiki/milestones/index.html'
 
+
+class HousePicturesView(ListView):
+    model = Property
+    # template_name = 'housewiki/dashboard/homes.html'
+    template_name = 'housewiki/dashboard/index.html'
 
 # class MilestoneView(ListView):
 #

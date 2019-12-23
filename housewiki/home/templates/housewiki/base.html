@@ -16,49 +16,56 @@
     </div>
 
     <div id="sidebar">
-      <h2>HouseWiki</h2>
+      <h1>HouseWiki</h1>
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
       {# <h3>Most Recently Asked Questions</h3> #}
       {# {% show_latest_questions 3 %} #}
-      <ul class="nav-links">
-
-
+      <ul class="nav-links" id="nav-links">
         <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-link">
+          <a href="{{ request.protocol }}{{ request.host }}" class="heading-sidebar-link">
+            Dashboard
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ favorite_properties }}" class="heading-sidebar-link">
+            Favorite Properties
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-sidebar-link">
             Milestones
           </a>
         </li>
         <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link">
+          <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-sidebar-link">
             Questions
           </a>
         </li>
         <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-link">
+          <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-sidebar-link">
             Wish List
           </a>
         </li>
         <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-link">
+          <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-sidebar-link">
             Knowledge &amp; Tips
           </a>
         </li>
         <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
+          <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-sidebar-link">
             Things To Consider
           </a>
         </li>
       </ul>
 
-      <h3 class="hidden-h3">Favorite Property</h3>
-      {# {% get_favorite_properties as favorite_properties %} #}
-      <ul>
-        {% for property in favorite_properties %}
-          <li>
-            <a href="{{ property.get_absolute_url }}">{{ property.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <!--<h3 class="hidden-h3">Favorite Property</h3>-->
+      <!--<ul>-->
+        {# {% for property in favorite_properties %} #}
+          <!--<li>-->
+            <!--<a href="{{ property.get_absolute_url }}">{{ property.title }}</a>-->
+          <!--</li>-->
+        {# {% endfor %} #}
+      <!--</ul>-->
     </div>
 
     </div>

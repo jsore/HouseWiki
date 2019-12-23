@@ -4,9 +4,53 @@
 
 
 from django.contrib import admin
+from django.utils.text import slugify
 
 # register models with the admin site
-from .models import Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
+from .models import Property, Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
+
+
+@admin.register(Property)
+class PropertyAdmin(admin.ModelAdmin):
+
+    # property_string = Property.class_string(Property)
+
+    list_display = ('floorplan_name',
+                    'community_name',
+                    'builder_name',
+                    'ranking',
+                    'cover',
+                    'floorplan_link',
+                    'square_footage',
+                    'bedrooms',
+                    'bathrooms',
+                    'garage',
+                    'optional_floorplan_info',
+                    'standout_features',
+                    'desired_options',
+                    'rounded_total_price',
+                    # 'property_string',
+                    # 'class_string',
+                    # '__str__',
+                    'string_property',
+                    'slug')
+
+    list_filter = ('ranking', 'builder_name', 'community_name')
+    search_fields = ('floorplan_name', 'bedrooms', 'rounded_total_price')
+    # prepopulated_fields = {'property_slug': ('class_string',),
+    #                        'class_string': ('class_string')}
+
+    # string = Property.class_string
+    # prepopulated_fields = {'slug': ('floorplan_name',)}
+    # prepopulated_fields = {'slug': (self.__str__(Property),)}
+    # prepopulated_fields = {'slug': ('__str__',)}
+    # prepopulated_fields = {'slug': ('string_property',)}
+
+    # prepopulated_fields = {'slug': ('-'.join(('floorplan_name',
+    #                                           'community_name',
+    #                                           'builder_name')),)}
+
+    ordering = ('ranking',)
 
 
 # use a decorator instead of admin.site.register(<Model>)
@@ -87,3 +131,4 @@ class ThingsToConsiderAdmin(admin.ModelAdmin):
     list_filter = ('created',)
     search_fields = ('title', 'created')
     prepopulated_fields = {'slug': ('title',)}
+
