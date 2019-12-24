@@ -210,9 +210,9 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 <br>
 
   - [ ] Houses section
-    + [ ] model
-    + [ ] dashboard view
-    + [ ] dashboard template
+    + [x] model
+    + [x] dashboard view
+    + [x] dashboard template
     + [ ] view
     + [ ] template
     + format: unordered list, but with a 'ranking' option in the list ( 1 to ~~3~~ 4 'stars' )
