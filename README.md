@@ -50,6 +50,7 @@ __General knowledge, tips__
   - This: `https://www.dhititle.com/Buyer-Resource-Center`
   - ** notes from picture from tiff in messenger Dec 18th ~12:40pm **
   - ** notes from the rest of the folder's docs **
+  - ** email from Tiff Dec 26th ~12pm `Fw: COMPLETE: DHI Mortgage Home Buyers Club Enrollment Packet - 190139188 Sorensen, Tiffany Sorensen, Justin` **
 
 
 <br><br>
