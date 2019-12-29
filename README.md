@@ -170,7 +170,7 @@ __House TODO's__
 
 
 --------------------------------------------------------------------------------------------------
-### Wikie Structure & Tech Specs
+### Wiki Structure & Tech Specs
 
 This section covers more technical aspects of this project, including specifics pertaining to what I'm aiming to accomplish with the project in its entirety.
 
@@ -226,6 +226,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
       * aggregate each question into the 'Questions' section of the wiki
     + grouped by section, organized by highest rank to least
     + sidebar of top 3
+    + how long each builder takes to build a house
+    + expected move-in ready date
 
 <br>
 
