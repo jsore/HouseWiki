@@ -89,6 +89,44 @@ body {
 .expanded {
   display: block;
 }
+.collapsed {
+  display: none;
+}
+.additional-opinions {
+  display: grid;
+  list-style-type: none;
+  padding: 0 0 0 35px;
+
+}
+
+.additional-opinions-title {
+  text-align: center;
+}
+.additional-opinions-li {
+  list-style: none;
+  text-align: center;
+}
+/*.additional-opinions-li:nth-child(even) {
+  list-style-type: square;
+}*/
+/*.additional-opinions-li.p {
+  list-style-type: square;
+}*/
+.additional-opinions-child-li {
+  list-style-type: square;
+  padding-top: 40px;
+  text-align: left;
+}
+.floorplan-link {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #888;
+}
+.list-item-span {
+  color: #333333;
+  padding-top: 10px;
+}
+
 /*.expando-house-details-wrapper.expando-house-details {
   display: none;
 }*/
@@ -274,6 +312,7 @@ h2, h3 {
   padding-top: 20px;
 }
 .list-item-title {
+  margin-left: 15px;
   color: #808080;
 }
 .second-row {
@@ -283,6 +322,7 @@ h2, h3 {
 .third-row {
   grid-row: 5 / 6;
   grid-column: 1 / span 3;
+  justify-self: normal;
   padding-top: 40px;
 }
 .fourth-row {

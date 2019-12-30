@@ -119,11 +119,13 @@
           <p class="property-rank">
             {{ property.ranking }}
           </p>
+
         </h3>
 
         <li class="house-list-picture">
           <img src="{{ property.cover.url }}" alt="{{ property.floorplan_name }}" class="img-thumbnail">
         </li>
+
         <li class="house-list-item list-item-title">Community: {{ property.community_name }}
           {# <span class="grid-separator">|</span> #}
         </li>
@@ -143,29 +145,42 @@
         <li class="house-list-item second-row">{{ property.garage }} garage</li>
         <li class="house-list-item third-row details">
           <div class="expando-house-details-wrapper">
-            {# <a href="." class="more-house-details" id="more-house-details-id" onclick="expandSection()">View more details</a> #}
-            {# <button class="more-house-details" id="more-house-details-id" onclick="expandSection()">View more details</button> #}
-            <!--<button class="more-house-details" id="more-house-details-id"
-            onclick="document.getElementById('expando-house-details-id').classList.toggle('expanded')">-->
-            <!--<button class="more-house-details" id="more-house-details-id"
-            >
-              View more details
-            </button> -->
             <div class="more-house-details-div">
 
-            </div>
-            <div class="expando-house-details" id="expando-house-details-id">
-              {# <p class="floorplan-title"></p> #}
-              <p class="floorplan-details">
-                <a href=".">Link to the floorplan</a>
-                {# <img src="{{ property.floorplan_img }}" alt="{{ property.floorplan_img }}" class="img-thumbnail"> #}
-              </p>
-              <h4>Additional info about the floorplan</h4>
-              <p class="optional-floorplan-info">{{ property.optional_floorplan_info }}</p>
-              <h4>Standout features</h4>
-              <p class="standout-features">{{ property.standout_features }}</p>
-              <h4>Desired options</h4>
-              <p class="desired-options">{{ property.desired_options }}</p>
+              <ul class="additional-opinions">
+                <h4 class="additional-opinions-title">Have any other thoughts about this property?</h4>
+
+                <li class="additional-opinions-li"><a class="floorplan-link" href="#">Floorplan</a></li>
+
+                <li class="additional-opinions-li">
+                  <li class="additional-opinions-child-li list-item-title">
+                    <a href="#" class="heading-link">Likes/dislikes about floorplan
+                      <span class="heading-a-link">Edit</span>
+                    </a>
+                    <br /><br />
+                    <span class="list-item-span">{{ property.optional_floorplan_info }}</span>
+                  </li>
+                </li>
+                <li class="additional-opinions-li">
+                  <li class="additional-opinions-child-li list-item-title">
+                    <a href="#" class="heading-link">Features that stood out
+                      <span class="heading-a-link">Edit</span>
+                    </a>
+                    <br /><br />
+                    <span class="list-item-span">{{ property.standout_features }}</span>
+                  </li>
+                </li>
+                <li class="additional-opinions-li">
+                  <li class="additional-opinions-child-li list-item-title">
+                    <a href="#" class="heading-link">Desired packages/elevation
+                      <span class="heading-a-link">Edit</span>
+                    </a>
+                    <br /><br />
+                    <span class="list-item-span">{{ property.desired_options }}</span>
+                  </li>
+                </li>
+
+              </ul>
             </div>
           </div>
         </li>

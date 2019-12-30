@@ -2,23 +2,15 @@
 
 {% load static %}
 
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block title %}{% endblock title %}</title>
     <link href="{% static 'css/housewiki.css' %}" rel="stylesheet">
 
+    <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'sha256-87tmJunVRGpRJq+ZT1YF1o3mu1aod28VFkUXjYSA4Hg='; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com"> -->
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      script-src 'sha256-87tmJunVRGpRJq+ZT1YF1o3mu1aod28VFkUXjYSA4Hg=' 'sha256-V34RX1GUgFxCpGrctmic5DqwZ3HBL2KVWOjbaDtSTn4' sha256-MBiJ62EG315PP4pnPMVYslnT3U+3X3A5LZ6N2cdrqvo=' 'sha256-spogx9/zrj8WhCpxonPtjdaY+cDNwnJkdStKvoAQWGg=';
       style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
       font-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com
     ">
@@ -37,43 +29,7 @@
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
       {# <h3>Most Recently Asked Questions</h3> #}
       {# {% show_latest_questions 3 %} #}
-      <ul class="nav-links" id="nav-links">
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}" class="heading-sidebar-link">
-            Dashboard
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ favorite_properties }}" class="heading-sidebar-link">
-            Favorite Properties
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-sidebar-link">
-            Milestones
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-sidebar-link">
-            Questions
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-sidebar-link">
-            Wish List
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-sidebar-link">
-            Knowledge &amp; Tips
-          </a>
-        </li>
-        <li class="sidebar-li">
-          <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-sidebar-link">
-            Things To Consider
-          </a>
-        </li>
-      </ul>
+
 
       <!--<h3 class="hidden-h3">Favorite Property</h3>-->
       <!--<ul>-->
@@ -90,8 +46,6 @@
     <!--<script integrity="sha256-zohOg3SwlUrus6PMcRkavLAIaP05dCfH2mXx15NfnOE=" crossorigin="anonymous">
 
     </script>-->
-    <script src="{% static 'js/expando.js' %}"
-    integrity="sha256-87tmJunVRGpRJq+ZT1YF1o3mu1aod28VFkUXjYSA4Hg="
-    crossorigin="anonymous"></script>
+    <!-- <script src="{% static 'js/expando.js' %}" integrity="sha256-87tmJunVRGpRJq+ZT1YF1o3mu1aod28VFkUXjYSA4Hg=" crossorigin="anonymous"></script> -->
   </body>
 </html>
