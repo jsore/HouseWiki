@@ -24,7 +24,7 @@
         {% for milestone in milestone_list %}
           <li class="list-item">
             {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
-            {{ milestone.title }}
+            {{ milestone.title|capfirst }}
             {# </a> #}
           </li>
         {% endfor %}
@@ -44,7 +44,7 @@
       {# <p class="explain-section">Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for question in question_list %}
-          <li class="list-item">{{ question.title }}</li>
+          <li class="list-item">{{ question.title|capfirst }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -62,7 +62,7 @@
       {# <p class="explain-section">Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for wish in wishlist_list %}
-          <li class="list-item">{{ wish.wish }}</li>
+          <li class="list-item">{{ wish.wish|capfirst }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -80,7 +80,7 @@
       {# <p class="explain-section">Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for tip in knowledge_and_tips_list %}
-          <li class="list-item">{{ tip.title }}</li>
+          <li class="list-item">{{ tip.title|capfirst }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -98,7 +98,7 @@
       {# <p class="explain-section"><br />Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for thing in things_to_consider_list %}
-          <li class="list-item">{{ thing.title }}</li>
+          <li class="list-item">{{ thing.title|capfirst }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -115,7 +115,7 @@
         {# <h4>{{ property.class_string }}</h4> #}
 
         <h3 class="house-list-property-name">
-          {{ property.floorplan_name }}
+          {{ property.floorplan_name|title }}
           <p class="property-rank">
             {{ property.ranking }}
           </p>
@@ -126,10 +126,10 @@
           <img src="{{ property.cover.url }}" alt="{{ property.floorplan_name }}" class="img-thumbnail">
         </li>
 
-        <li class="house-list-item list-item-title">Community: {{ property.community_name }}
+        <li class="house-list-item list-item-title">Community: {{ property.community_name|title }}
           {# <span class="grid-separator">|</span> #}
         </li>
-        <li class="house-list-item list-item-title">Builder: {{ property.builder_name }}
+        <li class="house-list-item list-item-title">Builder: {{ property.builder_name|title }}
           {# <span class="grid-separator">|</span> #}
         </li>
         {# <li>Our Ranking: {{ property.ranking }}</li> #}
@@ -158,7 +158,7 @@
                       <span class="heading-a-link">Edit</span>
                     </a>
                     <br /><br />
-                    <span class="list-item-span">{{ property.optional_floorplan_info }}</span>
+                    <span class="list-item-span">{{ property.optional_floorplan_info|capfirst }}</span>
                   </li>
                 </li>
                 <li class="additional-opinions-li">
@@ -167,7 +167,7 @@
                       <span class="heading-a-link">Edit</span>
                     </a>
                     <br /><br />
-                    <span class="list-item-span">{{ property.standout_features }}</span>
+                    <span class="list-item-span">{{ property.standout_features|capfirst }}</span>
                   </li>
                 </li>
                 <li class="additional-opinions-li">
@@ -176,7 +176,7 @@
                       <span class="heading-a-link">Edit</span>
                     </a>
                     <br /><br />
-                    <span class="list-item-span">{{ property.desired_options }}</span>
+                    <span class="list-item-span">{{ property.desired_options|capfirst }}</span>
                   </li>
                 </li>
 
