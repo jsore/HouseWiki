@@ -201,7 +201,7 @@ h2, h3 {
 
 .newline {
   padding-top: 10px;
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   color: #999999;
   font-size: 14px;
 }
@@ -268,7 +268,14 @@ h2, h3 {
 }
 
 .list-item {
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
+  padding: 17px 0 10px 0;
+}
+.pagination {
+  padding: 30px 0 0 0;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
 }
 .house-ul-grid-wrapper {
   display: grid;

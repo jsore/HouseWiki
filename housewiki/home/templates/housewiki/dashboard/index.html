@@ -24,16 +24,26 @@
         {% for milestone in milestone_list %}
           <li class="list-item">
             {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
-            {{ milestone.title|capfirst }}
+            {{ milestone.title|capfirst|truncatewords:12 }}
             {# </a> #}
+            <span>{{ milestone.status|lower }}</span>
           </li>
+          {# {% if milestone.status %} #}
+          {# <li> #}
+            <span class="milestone-reached">
+              <a href="#" class="heading-a-link">mark as reached</a>
+            </span>
+          {# </li> #}
+          {# {% endif %} #}
         {% endfor %}
       </ul>
     </div>
 
-    <div class="list-container">
+    <div class="list-container" id="question-list-container">
       <h3 class="list-container-heading">
-        <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link">
+        {# <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link"> #}
+        <a href="questions/" class="heading-link">
+        {# <a href="{% url 'housewiki/questions' %}" class="heading-link"> #}
           Questions <span class="heading-a-link">See all or edit</span>
         </a>
       </h3>
@@ -42,11 +52,28 @@
         <span class="newline">Newest addition:</span>
       </p>
       {# <p class="explain-section">Newest addition:</p> #}
-      <ul class="list-ul-container">
-        {% for question in question_list %}
-          <li class="list-item">{{ question.title|capfirst }}</li>
-        {% endfor %}
-      </ul>
+      {% if question_list %}
+        {% block questions %}
+
+        <ul class="list-ul-container">
+          {% for question in question_list %}
+            <li class="list-item">
+              {{ question.title|capfirst|truncatewords:12 }}
+            </li>
+            {% if question.answered %}
+              <li class="list-item">Answer: {{ question.answer }}</li>
+            {% else %}
+              <span class="question-answered">
+                <a href="#" class="heading-a-link">answer question</a>
+              </span>
+            {% endif %}
+
+          {% endfor %}
+
+
+          {% endblock questions %}
+        </ul>
+      {% endif %}
     </div>
 
     <div class="list-container">
@@ -62,7 +89,12 @@
       {# <p class="explain-section">Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for wish in wishlist_list %}
-          <li class="list-item">{{ wish.wish|capfirst }}</li>
+          <li class="list-item">
+            {{ wish.wish|capfirst|truncatewords:12 }}
+            <span class="property-rank">
+              {{ wish.ranking }}
+            </span>
+          </li>
         {% endfor %}
       </ul>
     </div>
@@ -80,7 +112,7 @@
       {# <p class="explain-section">Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for tip in knowledge_and_tips_list %}
-          <li class="list-item">{{ tip.title|capfirst }}</li>
+          <li class="list-item">{{ tip.title|capfirst|truncatewords:12 }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -98,7 +130,12 @@
       {# <p class="explain-section"><br />Newest addition:</p> #}
       <ul class="list-ul-container">
         {% for thing in things_to_consider_list %}
-          <li class="list-item">{{ thing.title|capfirst }}</li>
+          <li class="list-item">
+            {{ thing.title|capfirst|truncatewords:12 }}
+            <span class="property-rank">
+              {{ thing.ranking }}
+            </span>
+          </li>
         {% endfor %}
       </ul>
     </div>

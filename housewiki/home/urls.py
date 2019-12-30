@@ -17,4 +17,5 @@ urlpatterns = [
     # path takes no args and is mapped to 'dashboard' view
     path('', views.dashboard, name='dashboard'),
     # path('', include(views.dashboard, views.HousePicturesView), name='dashboard'),
+    path('questions/', views.questions, name='questions'),
 ]

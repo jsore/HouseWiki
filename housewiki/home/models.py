@@ -207,7 +207,7 @@ class WishList(models.Model):
 
     ranking = models.CharField(max_length=25,
                                choices=WISH_RANKING_CHOICES,
-                               default='kind of important')
+                               default='kind of important (4)')
 
     class Meta:
         ordering = ('ranking',)
