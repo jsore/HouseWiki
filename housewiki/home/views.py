@@ -51,20 +51,17 @@ def dashboard(request):
                    'knowledge_and_tips_list': knowledge_and_tips_list})
 
 
-def all_milestones(request):
-    queryset = Milestone.objects.all()
-    # context variable for the queryset results
-    context_object_name = 'milestones'
-    paginate_by = 25
-    template_name = 'housewiki/milestones/index.html'
+# def all_milestones(request):
+#     queryset = Milestone.objects.all()
+#     # context variable for the queryset results
+#     context_object_name = 'milestones'
+#     paginate_by = 25
+#     template_name = 'housewiki/milestones/index.html'
 
 
 def questions(request):
 
     context_object_name = 'questions'
-
-
-
     template_name = 'housewiki/questions/index.html'
     # questions = Question.objects.order_by('-created')[1:]
     # questions = queryset.order_by('-created')[1:]

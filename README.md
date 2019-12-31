@@ -6,31 +6,36 @@ For the wife and I, an attempt to keep our sanity in check during our house buyi
 <br>
 
 
---------------------------------------------------------------------------------------------------
-### Things to add to the Wiki
-
-Just some things I thought to ask or do while thinking up this project.
-
-
-<br><br>
+Friendly reminder in case it's not clear here because I'm not sure who all my wife is sending this out to:
 
 ```diff
 @@        Note: This is not the final product        @@
 ```
 
-  > _This page and repo only exists to help keep track of my code<br>
-  > and thoughts from my wife & I._
+  > _This page and repo only exists to help keep track of my code and thoughts<br>
+  > from my wife & I._
   >
-  > _Once complete, the Wiki will be linked here and will replace<br>
-  > all the notes under the 'Things To Add To The Wiki' section._
+  > _Once complete, the Wiki will be linked here and will replace all the notes<br>
+  > under the `Things To Add To The Wiki` section._
   >
-  > _Items with a strikethrough ( ~~like this~~ ) have already been<br>
-  > added to the forthcoming Wiki database._
+  > _Built with Python, Django and its default SQLite DB instead of Postgres <br>
+  > because scalability isn't an issue, and of course JS/HTML/CSS.<br>_
 
 ```diff
 @@        This project and all its info be compiled into a Wiki        @@
 ```
 
+
+<br><br>
+
+
+
+--------------------------------------------------------------------------------------------------
+### Things to add to the Wiki
+
+Just some things I thought to ask or do while thinking up this project.
+
+  > _Items with a ~~strikethrough~~ have already been added to the forthcoming Wiki database._
 
 <br><br>
 
@@ -319,6 +324,10 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 ### Project Status Updates & Roadblocks
 
 More technical aspects detailing the project's current status.
+
+  > Edit: Sorry, I'm trying to keep this updated…but…<br>
+  >
+  > …if you're interested, I'd check the commits if I were you.
 
 <details>
 
