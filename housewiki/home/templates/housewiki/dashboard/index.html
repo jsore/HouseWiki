@@ -44,15 +44,21 @@
         {# <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link"> #}
         <a href="questions/" class="heading-link">
         {# <a href="{% url 'housewiki/questions' %}" class="heading-link"> #}
-          Questions <span class="heading-a-link">See all or edit</span>
+          Questions
+            <span class="heading-a-link" id="questions-dashboard-link">See all or edit</span>
+
+            {# <span class="heading-a-link" id="questions-return-home-link">Collapse</span> #}
         </a>
+        <span class="heading-a-link" id="add-question-link">
+          <a href="/questions/add/" class="heading-a-link">Add question</a>
+        </span>
       </h3>
       <p class="explain-section">
         What we want to know about home buying.<br />
-        <span class="newline">Newest addition:</span>
+        <span class="newline" id="question-newline-span">Newest addition:</span>
       </p>
       {# <p class="explain-section">Newest addition:</p> #}
-      {% if question_list %}
+      {# {% if question_list %} #}
         {% block questions %}
 
         <ul class="list-ul-container">
@@ -60,6 +66,7 @@
             <li class="list-item">
               {{ question.title|capfirst|truncatewords:12 }}
             </li>
+
             {% if question.answered %}
               <li class="list-item">Answer: {{ question.answer }}</li>
             {% else %}
@@ -68,12 +75,13 @@
               </span>
             {% endif %}
 
+
           {% endfor %}
 
 
           {% endblock questions %}
         </ul>
-      {% endif %}
+      {# {% endif %} #}
     </div>
 
     <div class="list-container">

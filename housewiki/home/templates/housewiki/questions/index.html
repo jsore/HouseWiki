@@ -1,14 +1,19 @@
 {% extends "housewiki/dashboard/index.html" %}
 
+{% load static %}
+
+{% block subpagecss %}
+  <link href="{% static 'css/housewiki_questions.css' %}" rel="stylesheet">
+{% endblock subpagecss %}
 
 {% block title %}Questions{% endblock title %}
-{% autoescape off %}
+{# {% autoescape off %} #}
 
-  {% block content %}
-    {{ block.super }}
+  {# {% block content %} #}
+    {# {{ block.super }} #}
 
   {% block questions %}
-  {% if question_list_all %}
+  {# {% if question_list_all %} #}
 
     <ul class="list-ul-container" id="list-ul-container-id">
     {% for question_item in question_list_all %}
@@ -20,36 +25,22 @@
       {% else %}
         {# <span class="question-answered"> #}
         <li class="list-item" style="list-style: none; padding: 0 0 0 0">
-          <a href="#" class="heading-a-link" style="padding: 0 0 0 0">answer question</a>
+          <a href="/answer/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link" style="padding: 0 0 0 0">answer question</a>
+          <a href="/edit/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link">edit</a>
+          <a href="/delete/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link">delete</a>
         </li>
-        {# </span> #}
+
       {% endif %}
     {% endfor %}
     </ul>
-    {% endif %}
-    <div class="pagination" id="question-pages">
-    {# <li class="pagination"> #}
-      <span class="step-links">
+    {# {% endif %} #}
 
-        {% if paginated_questions.has_previous %}
-          <a href="?page=1">&laquo; first</a>
-          <a href="?page={{ paginated_questions.previous_page_number }}">previous</a>
-        {% endif %}
 
-        <span class="current">
-          Page {{ paginated_questions.number }} of {{ paginated_questions.paginator.num_pages }}
-        </span>
-
-        {% if paginated_questions.has_next %}
-          <a href="?page={{ paginated_questions.next_page_number }}">next</a>
-          <a href="?page={{ paginated_questions.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-      </span>
-    </div>
     {# </li> #}
 
   {% endblock questions %}
 
-{% endblock content %}
-{% endautoescape %}
+{# {% endblock content %} #}
+{# {% endautoescape %} #}
+
 

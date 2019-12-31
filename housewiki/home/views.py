@@ -74,22 +74,22 @@ def questions(request):
     # paginate_by = 25
     # paginator = Paginator(question_list_all, 20)
     # paginator = Paginator(question_list_all, 10)
-    paginator = Paginator(question_list_all, 1)
+    ## paginator = Paginator(question_list_all, 1)
     # try:
-    page = request.GET.get('page')
+    ## page = request.GET.get('page')
 
-    try:
-        paginated_questions = paginator.get_page(page)
-    except PageNotAnInteger:
+    ## try:
+    ##   paginated_questions = paginator.get_page(page)
+    ## except PageNotAnInteger:
         # If page is not an integer deliver the first page
-        paginated_questions = paginator.get_page(1)
-    except EmptyPage:
-        if request.is_ajax():
+        ## paginated_questions = paginator.get_page(1)
+    ## except EmptyPage:
+        ## if request.is_ajax():
             # If the request is AJAX and the page is out of range
             # return an empty page
-            return HttpResponse('')
+            ## return HttpResponse('')
         # If page is out of range deliver last page of results
-        paginated_questions = paginator.get_page(paginator.num_pages)
+        ## paginated_questions = paginator.get_page(paginator.num_pages)
 
     #if request.is_ajax():
     #    return render(request,
@@ -98,8 +98,8 @@ def questions(request):
 
     return render(request,
                   'housewiki/questions/index.html',
-                  {'paginated_questions': paginated_questions,
-                   'question_list_all': question_list_all,
+                  {'question_list_all': question_list_all,
+                   ##'paginated_questions': paginated_questions,
                    'property_list': property_list,
                    'milestone_list': milestone_list,
                    'wishlist_list': wishlist_list,

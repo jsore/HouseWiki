@@ -9,13 +9,18 @@
     <link href="{% static 'css/housewiki.css' %}" rel="stylesheet">
 
     <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'sha256-87tmJunVRGpRJq+ZT1YF1o3mu1aod28VFkUXjYSA4Hg='; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com"> -->
-    <meta http-equiv="Content-Security-Policy" content="
+
+    <!--<meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
       style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
       font-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com
-    ">
+    ">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo|Ubuntu+Mono" />
+    <!--<script src="{% static 'js/divPlacementHack.js' %}"></script>-->
 
+    {% block subpagecss %}
+
+    {% endblock subpagecss %}
   </head>
   <body>
     <div id="parent-wrapper">
@@ -27,18 +32,31 @@
     <div id="sidebar">
       <h1>HouseWiki</h1>
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
-      {# <h3>Most Recently Asked Questions</h3> #}
-      {# {% show_latest_questions 3 %} #}
-
-
-      <!--<h3 class="hidden-h3">Favorite Property</h3>-->
-      <!--<ul>-->
-        {# {% for property in favorite_properties %} #}
-          <!--<li>-->
-            <!--<a href="{{ property.get_absolute_url }}">{{ property.title }}</a>-->
-          <!--</li>-->
-        {# {% endfor %} #}
-      <!--</ul>-->
+      <ul id="sidebar-ul">
+        {# <li class="sidebar-li"><a href="housewiki/" class="sidebar-li-a" id="sidebar-dashboard">Dashboard</a></li> #}
+        <li class="sidebar-li">
+          {# <a href="housewiki/" class="sidebar-li-a" id="sidebar-dashboard">Dashboard</a> #}
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/"
+            class="sidebar-li-a" id="sidebar-dashboard">
+            Dashboard
+          </a>
+        </li>
+        <li class="sidebar-li">
+          <a href="milestones/" class="sidebar-li-a" id="sidebar-milestones">Milestones</a>
+        </li>
+        <li class="sidebar-li">
+          <a href="questions/" class="sidebar-li-a" id="sidebar-questions">Questions</a>
+        </li>
+        <li class="sidebar-li">
+          <a href="wishlist/" class="sidebar-li-a" id="sidebar-wishlist">Wish List</a>
+        </li>
+        <li class="sidebar-li">
+          <a href="tips/" class="sidebar-li-a" id="sidebar-tips">Tips</a>
+        </li>
+        <li class="sidebar-li">
+          <a href="otherfactors/" class="sidebar-li-a" id="sidebar-otherfactors">Other Factors</a>
+        </li>
+      </ul>
     </div>
 
     </div>
