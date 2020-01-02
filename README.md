@@ -50,7 +50,7 @@ __Milestones__
 
 __General knowledge, tips__
 
-  - You can apply to other lenders within ~~15~~ 14 days without impacting credit
+  - ~~You can apply to other lenders within ~~15~~ 14 days without impacting credit~~
   - Insurance: make sure we have __replacement__ cost, not depreciation cost
   - This: `https://www.dhititle.com/Buyer-Resource-Center`
   - ** notes from picture from tiff in messenger Dec 18th ~12:40pm **
@@ -196,8 +196,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] model
     + [x] dashboard view
     + [x] dashboard template
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: checkbox list
     + provide a `textarea` for comments regarding how the milestone was accomplished
 
@@ -207,8 +207,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] model
     + [x] dashboard view
     + [x] dashboard template
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: unordered list
     + make them answerable
     + flag them as 'answered' if answered
@@ -219,8 +219,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] model
     + [x] dashboard view
     + [x] dashboard template
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: unordered list, but with a 'ranking' option in the list ( 1 to ~~3~~ 4 'stars' )
     + under each house in the aggregated list of houses and within each house:
       * description of house layout and provide an option to bold any specific description ( for favorites ) and an option of making the text red ( for specific dislikes )
@@ -240,8 +240,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] model
     + [x] dashboard view
     + [x] dashboard template
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: ordered list
     + items should be able to be ranked favorite to least
     + provide an option to 'flag' the wish as a must or absolute favorite ( bold/red, etc etc )
@@ -252,8 +252,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] dashboard view
     + [x] dashboard template
     + [x] model
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: unordered list
 
 <br>
@@ -262,8 +262,8 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
     + [x] dashboard view
     + [x] dashboard template
     + [x] model
-    + [ ] view
-    + [ ] template
+    + [x] view
+    + [x] template
     + format: unordered list
 
 <br>
