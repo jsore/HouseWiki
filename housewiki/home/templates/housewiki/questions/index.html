@@ -4,6 +4,7 @@
 
 {% block subpagecss %}
   <link href="{% static 'css/housewiki_questions.css' %}" rel="stylesheet">
+  <link href="{% static 'css/housewiki_shared.css' %}" rel="stylesheet">
 {% endblock subpagecss %}
 
 {% block title %}Questions{% endblock title %}
@@ -24,17 +25,16 @@
         <li class="list-item">Answer: {{ question_item.answer }}</li>
       {% else %}
         {# <span class="question-answered"> #}
-        <li class="list-item" style="list-style: none; padding: 0 0 0 0">
-          <a href="/answer/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link" style="padding: 0 0 0 0">answer question</a>
-          <a href="/edit/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link">edit</a>
-          <a href="/delete/{{ question_item.slug|truncatewords:15 }}" class="heading-a-link">delete</a>
+        <li class="list-item" style="list-style: none; padding: 0">
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/answer/{{ question_item.slug|truncatewords:15 }}/" class="heading-a-link" style="padding: 0">answer question</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/edit/{{ question_item.slug|truncatewords:15 }}/" class="heading-a-link">edit</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/delete/{{ question_item.slug|truncatewords:15 }}/" class="heading-a-link">delete</a>
         </li>
 
       {% endif %}
     {% endfor %}
     </ul>
     {# {% endif %} #}
-
 
     {# </li> #}
 

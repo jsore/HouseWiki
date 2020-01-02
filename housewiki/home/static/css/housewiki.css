@@ -1,8 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
   /*font-family: helvetica, sans-serif;*/
-  font-family: 'Archivo', sans-serif;
+  /*font-family: 'Archivo', sans-serif;*/
   /*overflow: hidden;*/
   /*animation: fadeInAnimation ease 2s;*/
   /*animation-iteration-count: 1;*/
@@ -60,14 +61,25 @@ body {
 .sidebar-li {
   list-style-type: none;
 }
+/*.sidebar-li:hover, .sidebar-li:focus {
+  background-color: #efefef;
+}*/
 .sidebar-li-a {
   text-decoration: none;
   /*list-style-type: none;*/
   padding: 20px 0 20px 0;
-  color: #404040;
+  /*color: #404040;*/
+  color: #8c8c8c;
 }
-#active-sidebar-link {
+.sidebar-li-a:hover, .sidebar-li-a:focus {
+  color: black;
+}
+/*#active-sidebar-link {
   background-color: white;
+}*/
+#sidebar-dashboard {
+  color: black;
+  font-weight: bold;
 }
 
 #content {
@@ -80,7 +92,7 @@ body {
   grid-template-columns: auto auto;
   /*grid-auto-rows: 100%;*/
   align-content: baseline;
-  letter-spacing: 0.5px;
+  /*letter-spacing: 0.5px;*/
 }
 
 
@@ -178,6 +190,8 @@ body {
   padding-left: 10px;
   color: #888;
   font-weight: lighter;
+  font-family: 'Source Sans Pro', sans-serif;;
+  letter-spacing: unset;
 }
 .heading-a-link:hover, .heading-a-link:focus {
   text-decoration: none;
@@ -217,10 +231,14 @@ li {
   padding: 10px;
 }
 
-h2, h3 {
+h1, h2, h3 {
   letter-spacing: 0.8px;
+  font-family: 'Raleway', sans-serif;
 }
-
+/*a {
+  font-family: 'Source Sans Pro', sans-serif;;
+  letter-spacing: unset;
+}*/
 
 
 
@@ -236,7 +254,7 @@ h2, h3 {
   color: #999999;
   font-size: 14px;
 }
-.property-rank {
+.property-rank, .milestone-status, .is-question-answered, .question-answered {
   color: #999999;
   font-size: 14px;
   display: inline;
@@ -317,7 +335,7 @@ h2, h3 {
   justify-items: center;
   padding-left: 0;
   border-radius: 8px;
-  /*background-color: white;*/
+  background-color: white;
 }
 .house-ul-grid-wrapper:hover, .house-ul-grid-wrapper:focus {
   transition: .25s;
@@ -406,6 +424,11 @@ h2, h3 {
   max-width: 400px;
   max-height: 400px;
 }
+
+.mark-milestone, .answer-the-question, .add-milestone-link {
+  display: none;
+}
+
 
 /*540, 760, 912, 1140, 1283*/
 @media screen and (max-width: 760px) {

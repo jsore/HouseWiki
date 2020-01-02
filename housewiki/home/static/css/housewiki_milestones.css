@@ -1,0 +1,19 @@
+#milestone-list-container {
+  box-shadow 0.3s ease-in, color 0.2s linear;
+  box-shadow: 4px 4px 20px -5px rgba(0,0,0,.4), -12px -12px 20px -3px rgba(255, 255, 255, 1), inset 1px 1px 1px rgba(255, 255, 255, .2), inset -1px -1px 1px rgba(0, 0, 0, .1);
+  background-color: white;
+  padding: 20px 20px 32px 20px;
+}
+#milestone-list-container:hover, #milestone-list-container:focus  {
+  box-shadow: 4px 4px 20px -5px rgba(0,0,0,.4), -12px -12px 20px -3px rgba(255, 255, 255, 1), inset 1px 1px 1px rgba(255, 255, 255, .2), inset -1px -1px 1px rgba(0, 0, 0, .1);
+}
+#sidebar-milestones {
+  color: black;
+  font-weight: bold;
+}
+#milestones-dashboard-link, #milestone-newline-span {
+  display: none;
+}
+.mark-milestone {
+  display: inline-block;
+}

@@ -5,97 +5,115 @@
 {% block title %}Dashboard{% endblock title %}
 
 {% block content %}
-  {# <h2>Dashboard</h2> #}
-  {# <h2>Wiki Overview</h2> #}
-  {# <p class="explain-section">Review a consolidated list of items from each of this project's sections.</p> #}
-    <div class="list-wrapper">
-    <div class="list-container">
+
+  <div class="list-wrapper">
+
+<!--================================================
+    Dashboard-Milestones section
+    ================================================ -->
+    <div class="list-container" id="milestone-list-container">
       <h3 class="list-container-heading">
-        <a href="{{ request.protocol }}{{ request.host }}{{ milestones }}" class="heading-link">
-          Milestones <span class="heading-a-link">See all or edit</span>
+        <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/" class="heading-link">
+          Milestones
+          <span class="heading-a-link" id="milestones-dashboard-link">
+            see all or edit
+          </span>
         </a>
+        <span class="heading-a-link" id="add-milestone-link">
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/add/" class="heading-a-link">
+            add milestone
+          </a>
+        </span>
       </h3>
       <p class="explain-section">
         What we need to or already have accomplished.<br />
-        <span class="newline">Newest addition:</span>
+        <span class="newline" id="milestone-newline-span">
+          Newest addition:
+        </span>
       </p>
-      {# <p class="explain-section">Newest addition:</p> #}
+
+      {% block milestones %}
+
       <ul class="list-ul-container">
+
+        <!-- ==========  QuerySet  ========== -->
         {% for milestone in milestone_list %}
           <li class="list-item">
-            {# <a href="{{ request.protocol }}{{ request.host }}{{ milestone.slug }}"> #}
             {{ milestone.title|capfirst|truncatewords:12 }}
-            {# </a> #}
-            <span>{{ milestone.status|lower }}</span>
+            <span class="milestone-status">{{ milestone.status|lower }}</span>
           </li>
-          {# {% if milestone.status %} #}
-          {# <li> #}
-            <span class="milestone-reached">
-              <a href="#" class="heading-a-link">mark as reached</a>
-            </span>
-          {# </li> #}
-          {# {% endif %} #}
         {% endfor %}
+
+        {% endblock milestones %}
       </ul>
     </div>
 
+
+<!--================================================
+    Dashboard-Questions section
+    ================================================ -->
     <div class="list-container" id="question-list-container">
       <h3 class="list-container-heading">
-        {# <a href="{{ request.protocol }}{{ request.host }}{{ questions }}" class="heading-link"> #}
-        <a href="questions/" class="heading-link">
-        {# <a href="{% url 'housewiki/questions' %}" class="heading-link"> #}
+        <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/" class="heading-link">
           Questions
-            <span class="heading-a-link" id="questions-dashboard-link">See all or edit</span>
-
-            {# <span class="heading-a-link" id="questions-return-home-link">Collapse</span> #}
+          <span class="heading-a-link" id="questions-dashboard-link">
+            see all or edit
+          </span>
         </a>
         <span class="heading-a-link" id="add-question-link">
-          <a href="/questions/add/" class="heading-a-link">Add question</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/add/" class="heading-a-link">
+          add question</a>
         </span>
       </h3>
       <p class="explain-section">
         What we want to know about home buying.<br />
-        <span class="newline" id="question-newline-span">Newest addition:</span>
+        <span class="newline" id="question-newline-span">
+          Newest addition:
+        </span>
       </p>
-      {# <p class="explain-section">Newest addition:</p> #}
-      {# {% if question_list %} #}
-        {% block questions %}
 
+      {% block questions %}
         <ul class="list-ul-container">
+
+          <!-- ==========  QuerySet  ========== -->
           {% for question in question_list %}
             <li class="list-item">
               {{ question.title|capfirst|truncatewords:12 }}
+              {% if question.answered %}
+                <span class="is-question-answered">answered</span>
+                <li class="list-item">Answer: {{ question.answer }}</li>
+              {% else %}
+                <span class="question-answered">not answered</span>
+                <a href="#" class="heading-a-link answer-the-question">answer question</a>
+              {% endif %}
             </li>
-
-            {% if question.answered %}
-              <li class="list-item">Answer: {{ question.answer }}</li>
-            {% else %}
-              <span class="question-answered">
-                <a href="#" class="heading-a-link">answer question</a>
-              </span>
-            {% endif %}
-
-
           {% endfor %}
-
 
           {% endblock questions %}
         </ul>
       {# {% endif %} #}
     </div>
 
+<!--================================================
+    Dashboard-Wish List section
+    ================================================ -->
     <div class="list-container">
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-link">
-          Wish List <span class="heading-a-link">See all or edit</span>
+          Wish List
+          <span class="heading-a-link">
+            see all or edit
+          </span>
         </a>
       </h3>
       <p class="explain-section">
         What traits we want in a property.<br />
         <span class="newline">Newest addition:</span>
       </p>
-      {# <p class="explain-section">Newest addition:</p> #}
+
       <ul class="list-ul-container">
+
+        <!-- ==========  QuerySet  ========== -->
         {% for wish in wishlist_list %}
           <li class="list-item">
             {{ wish.wish|capfirst|truncatewords:12 }}
@@ -104,39 +122,56 @@
             </span>
           </li>
         {% endfor %}
+
       </ul>
     </div>
 
+<!--================================================
+    Dashboard-Tips section
+    ================================================ -->
     <div class="list-container">
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-link">
-          Knowledge &amp; Tips <span class="heading-a-link">See all or edit</span>
+          Knowledge &amp; Tips
+          <span class="heading-a-link">
+            see all or edit
+          </span>
         </a>
       </h3>
       <p class="explain-section">
         What we've learned and need to remember.<br />
         <span class="newline">Newest addition:</span>
       </p>
-      {# <p class="explain-section">Newest addition:</p> #}
+
       <ul class="list-ul-container">
+
+        <!-- ==========  QuerySet  ========== -->
         {% for tip in knowledge_and_tips_list %}
           <li class="list-item">{{ tip.title|capfirst|truncatewords:12 }}</li>
         {% endfor %}
       </ul>
     </div>
 
+<!--================================================
+    Dashboard-Other Factors section
+    ================================================ -->
     <div class="list-container">
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
-          Things To Consider <span class="heading-a-link">See all or edit</span>
+          Things To Consider
+          <span class="heading-a-link">
+            see all or edit
+          </span>
         </a>
       </h3>
       <p class="explain-section">
         What we want to keep in mind while house hunting.<br />
         <span class="newline">Newest addition:</span>
       </p>
-      {# <p class="explain-section"><br />Newest addition:</p> #}
+
       <ul class="list-ul-container">
+
+        <!-- ==========  QuerySet  ========== -->
         {% for thing in things_to_consider_list %}
           <li class="list-item">
             {{ thing.title|capfirst|truncatewords:12 }}
@@ -145,82 +180,102 @@
             </span>
           </li>
         {% endfor %}
+
       </ul>
     </div>
 
   </div>
+
+<!--================================================
+  Dashboard-Favorite Properties section
+  ================================================ -->
   <div class="property-list">
     <h3 class="property-list-heading">
       Favorite Properties
     </h3>
-    {# <ul class="house-ul-grid-wrapper"> #}
-      <div>
+
+    <div>
+
+      <!-- ==========  QuerySet  ========== -->
       {% for property in property_list %}
       <ul class="house-ul-grid-wrapper">
-        {# <h4>{{ property.class_string }}</h4> #}
-
         <h3 class="house-list-property-name">
           {{ property.floorplan_name|title }}
           <p class="property-rank">
             {{ property.ranking }}
           </p>
-          <p>
-            <a href="#">edit</a>
-          </p>
+          <!--<p>-->
+            <a href="#" class="heading-a-link">edit</a>
+          <!--</p>-->
         </h3>
 
         <li class="house-list-picture">
           <img src="{{ property.cover.url }}" alt="{{ property.floorplan_name }}" class="img-thumbnail">
         </li>
 
-        <li class="house-list-item list-item-title">Community: {{ property.community_name|title }}
+        <li class="house-list-item list-item-title">
+          Community: {{ property.community_name|title }}
           {# <span class="grid-separator">|</span> #}
         </li>
-        <li class="house-list-item list-item-title">Builder: {{ property.builder_name|title }}
+        <li class="house-list-item list-item-title">
+          Builder: {{ property.builder_name|title }}
           {# <span class="grid-separator">|</span> #}
         </li>
         {# <li>Our Ranking: {{ property.ranking }}</li> #}
-        <li class="house-list-item list-item-title"> Estimated Price: {{ property.rounded_total_price }}
+        <li class="house-list-item list-item-title">
+          Estimated Price: {{ property.rounded_total_price }}
           {# <span class="grid-separator">|</span> #}
         </li>
-        <li class="house-list-item second-row">{{ property.square_footage }} sq. ft.
+        <li class="house-list-item second-row">
+          {{ property.square_footage }} sq. ft.
           {# <span class="grid-separator">|</span> #}
         </li>
-        <li class="house-list-item second-row">{{ property.bedrooms }} bed, {{ property.bathrooms }} bath
+        <li class="house-list-item second-row">
+          {{ property.bedrooms }} bed, {{ property.bathrooms }} bath
           {# <span class="grid-separator">|</span> #}
         </li>
-        <li class="house-list-item second-row">{{ property.garage }} garage</li>
+        <li class="house-list-item second-row">
+        {{ property.garage }} garage</li>
+
         <li class="house-list-item third-row details">
+          <!-- this is a mess -->
           <div class="expando-house-details-wrapper">
             <div class="more-house-details-div">
-
               <ul class="additional-opinions">
-                <h4 class="additional-opinions-title">Have any other thoughts about this property?</h4>
-
-                <li class="additional-opinions-li"><a class="floorplan-link" href="#">Floorplan</a></li>
+                <h4 class="additional-opinions-title">
+                  Have any other thoughts about this property?
+                </h4>
+                <li class="additional-opinions-li">
+                  <a class="floorplan-link" href="#">
+                    Floorplan
+                  </a>
+                </li>
 
                 <li class="additional-opinions-li">
                   <li class="additional-opinions-child-li list-item-title">
-                    <a href="#" class="heading-link">Likes/dislikes about floorplan
-                      <span class="heading-a-link">Edit</span>
+                    <a href="#" class="heading-link">
+                      Likes/dislikes about floorplan
+                      <span class="heading-a-link">edit</span>
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.optional_floorplan_info|capfirst }}</span>
                   </li>
                 </li>
+
                 <li class="additional-opinions-li">
                   <li class="additional-opinions-child-li list-item-title">
                     <a href="#" class="heading-link">Features that stood out
-                      <span class="heading-a-link">Edit</span>
+                      <span class="heading-a-link">edit</span>
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.standout_features|capfirst }}</span>
                   </li>
                 </li>
+
                 <li class="additional-opinions-li">
                   <li class="additional-opinions-child-li list-item-title">
                     <a href="#" class="heading-link">Desired packages/elevation
-                      <span class="heading-a-link">Edit</span>
+                      <span class="heading-a-link">edit</span>
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.desired_options|capfirst }}</span>
@@ -235,12 +290,8 @@
       </ul>
       {% endfor %}
 
-
-
     </div>
   </div>
-
-
 
 {% endblock content %}
 

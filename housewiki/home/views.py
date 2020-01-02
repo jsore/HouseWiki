@@ -51,12 +51,23 @@ def dashboard(request):
                    'knowledge_and_tips_list': knowledge_and_tips_list})
 
 
-# def all_milestones(request):
-#     queryset = Milestone.objects.all()
-#     # context variable for the queryset results
-#     context_object_name = 'milestones'
-#     paginate_by = 25
-#     template_name = 'housewiki/milestones/index.html'
+def milestones(request):
+    # context variable for the queryset results
+    context_object_name = 'milestones'
+    template_name = 'housewiki/milestones/index.html'
+    milestone_list_all = Milestone.objects.all()
+
+    # yes, this is gonna get repetitive and should be done
+    # in a smarter way, but it technically works for now
+    return render(request,
+                  'housewiki/milestones/index.html',
+                  {'milestone_list_all': milestone_list_all,
+                   'property_list': property_list,
+                   #'milestone_list': milestone_list,
+                   'question_list': question_list,
+                   'wishlist_list': wishlist_list,
+                   'things_to_consider_list': things_to_consider_list,
+                   'knowledge_and_tips_list': knowledge_and_tips_list})
 
 
 def questions(request):
@@ -101,6 +112,52 @@ def questions(request):
                    'milestone_list': milestone_list,
                    'wishlist_list': wishlist_list,
                    'things_to_consider_list': things_to_consider_list,
+                   'knowledge_and_tips_list': knowledge_and_tips_list})
+
+
+def wishlist(request):
+    # context variable for the queryset results
+    context_object_name = 'wishlist'
+    template_name = 'housewiki/wishlist/index.html'
+    wishlist_list_all = WishList.objects.all()
+    return render(request,
+                  'housewiki/wishlist/index.html',
+                  {'wishlist_list_all': wishlist_list_all,
+                   'property_list': property_list,
+                   'milestone_list': milestone_list,
+                   'question_list': question_list,
+                   #'wishlist_list': wishlist_list,
+                   'things_to_consider_list': things_to_consider_list,
+                   'knowledge_and_tips_list': knowledge_and_tips_list})
+
+
+def tips(request):
+    context_object_name = 'tips'
+    template_name = 'housewiki/tips/index.html'
+    tips_list_all = KnowledgeAndTips.objects.all()
+    return render(request,
+                  'housewiki/tips/index.html',
+                  {'tips_list_all': tips_list_all,
+                   'property_list': property_list,
+                   'question_list': question_list,
+                   'milestone_list': milestone_list,
+                   'wishlist_list': wishlist_list,
+                   #'knowledge_and_tips_list': knowledge_and_tips_list,
+                   'things_to_consider_list': things_to_consider_list})
+
+
+def otherfactors(request):
+    context_object_name = 'otherfactors'
+    template_name = 'housewiki/otherfactors/index.html'
+    otherfactors_list_all = ThingsToConsider.objects.all()
+    return render(request,
+                  'housewiki/otherfactors/index.html',
+                  {'otherfactors_list_all': otherfactors_list_all,
+                   'property_list': property_list,
+                   'question_list': question_list,
+                   'milestone_list': milestone_list,
+                   'wishlist_list': wishlist_list,
+                   #'things_to_consider_list': things_to_consider_list,
                    'knowledge_and_tips_list': knowledge_and_tips_list})
 
 

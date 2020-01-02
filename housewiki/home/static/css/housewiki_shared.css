@@ -1,0 +1,17 @@
+.sidebar-li-a, #sidebar-dashboard {
+  color: #8c8c8c;
+  font-weight: normal;
+}
+#sidebar-dashboard:hover, #sidebar-dashboard:focus {
+  color: black;
+}
+#parent-wrapper {
+  background-color: #efefef;
+}
+.property-list:hover, .property-list:focus {
+  transition: .25s;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #efefef;
+}

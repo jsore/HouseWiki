@@ -15,7 +15,8 @@
       style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com;
       font-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com
     ">-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo|Ubuntu+Mono" />
+    {# <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo|Ubuntu+Mono" /> #}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro&display=swap" />
     <!--<script src="{% static 'js/divPlacementHack.js' %}"></script>-->
 
     {% block subpagecss %}
@@ -30,7 +31,9 @@
     </div>
 
     <div id="sidebar">
-      <h1>HouseWiki</h1>
+      <h1><a href="{{ request.protocol }}{{ request.host }}/housewiki/" class="sidebar-li-a">
+        HouseWiki
+      </a></h1>
       <p>Thoughts, questions &amp; opinions about the home buying process.</p>
       <ul id="sidebar-ul">
         {# <li class="sidebar-li"><a href="housewiki/" class="sidebar-li-a" id="sidebar-dashboard">Dashboard</a></li> #}
@@ -42,19 +45,34 @@
           </a>
         </li>
         <li class="sidebar-li">
-          <a href="milestones/" class="sidebar-li-a" id="sidebar-milestones">Milestones</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/"
+            class="sidebar-li-a" id="sidebar-milestones">
+            Milestones
+          </a>
         </li>
         <li class="sidebar-li">
-          <a href="questions/" class="sidebar-li-a" id="sidebar-questions">Questions</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/"
+            class="sidebar-li-a" id="sidebar-questions">
+            Questions
+          </a>
         </li>
         <li class="sidebar-li">
-          <a href="wishlist/" class="sidebar-li-a" id="sidebar-wishlist">Wish List</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/wishlist/"
+            class="sidebar-li-a" id="sidebar-wishlist">
+            Wish List
+          </a>
         </li>
         <li class="sidebar-li">
-          <a href="tips/" class="sidebar-li-a" id="sidebar-tips">Tips</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/tips/"
+            class="sidebar-li-a" id="sidebar-tips">
+            Tips
+          </a>
         </li>
         <li class="sidebar-li">
-          <a href="otherfactors/" class="sidebar-li-a" id="sidebar-otherfactors">Other Factors</a>
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/otherfactors/"
+            class="sidebar-li-a" id="sidebar-otherfactors">
+            Other Factors
+          </a>
         </li>
       </ul>
     </div>

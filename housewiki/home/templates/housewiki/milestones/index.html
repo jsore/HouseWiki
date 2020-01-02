@@ -1,0 +1,30 @@
+{% extends "housewiki/dashboard/index.html" %}
+
+{% load static %}
+
+{% block subpagecss %}
+  <link href="{% static 'css/housewiki_milestones.css' %}" rel="stylesheet">
+  <link href="{% static 'css/housewiki_shared.css' %}" rel="stylesheet">
+{% endblock subpagecss %}
+
+{% block title %}Questions{% endblock title %}
+
+{% block milestones %}
+  {% for milestone_item in milestone_list_all %}
+    <li class="list-item">
+      {{ milestone_item.title|capfirst }}
+      <span class="milestone-status">{{ milestone_item.status|lower }}</span>
+    </li>
+
+    <li class="list-item" style="list-style: none; padding: 0 0 0 0">
+            {# set this as hidden/shown with JS based on milestone-status #}
+      <a href="#" class="heading-a-link mark-milestone">mark as reached</a>
+      <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/edit/{{ milestone_item.slug|truncatewords:15 }}/"
+        class="heading-a-link">edit</a>
+      <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/delete/{{ milestone_item.slug|truncatewords:15 }}/"
+        class="heading-a-link">delete</a>
+    </li>
+  {% endfor %}
+{% endblock milestones %}
+
+
