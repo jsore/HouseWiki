@@ -1,0 +1,30 @@
+{% extends "housewiki/dashboard/index.html" %}
+
+{% load static %}
+
+{% block subpagecss %}
+  <link href="{% static 'css/housewiki_wishlist.css' %}" rel="stylesheet">
+  <link href="{% static 'css/housewiki_shared.css' %}" rel="stylesheet">
+{% endblock subpagecss %}
+
+{% block title %}Wish List{% endblock title %}
+
+{% block wishlist %}
+{% for wishlist_item in wishlist_list_all %}
+    <li class="list-item">
+      {{ wishlist_item.wish|capfirst }}
+      <span class="property-rank">
+              {{ wishlist_item.ranking|lower }}
+            </span>
+      {# <span class="wish-item-ranking">{{ wishlist_item.ranking|lower }}</span> #}
+    </li>
+
+    <li class="list-item" style="list-style: none; padding: 0 0 0 12px">
+            {# set this as hidden/shown with JS based on milestone-status #}
+      <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/edit/{{ wishlist_item.slug|truncatewords:15 }}/"
+        class="heading-a-link">edit</a>
+      <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/delete/{{ wishlist_item.slug|truncatewords:15 }}/"
+        class="heading-a-link">delete</a>
+    </li>
+  {% endfor %}
+{% endblock wishlist %}

@@ -97,20 +97,26 @@
 <!--================================================
     Dashboard-Wish List section
     ================================================ -->
-    <div class="list-container">
+    <div class="list-container" id="wishlist-list-container">
       <h3 class="list-container-heading">
-        <a href="{{ request.protocol }}{{ request.host }}{{ wishes }}" class="heading-link">
+        <a href="{{ request.protocol }}{{ request.host }}/housewiki/wishlist/" class="heading-link">
           Wish List
-          <span class="heading-a-link">
+          <span class="heading-a-link" id="wishlist-dashboard-link">
             see all or edit
           </span>
         </a>
+        <span class="heading-a-link" id="add-wishlist-link">
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/wishlist/add/" class="heading-a-link">
+            add wishlist item
+          </a>
+        </span>
       </h3>
       <p class="explain-section">
         What traits we want in a property.<br />
-        <span class="newline">Newest addition:</span>
+        <span class="newline" id="wishlist-newline-span">Newest addition:</span>
       </p>
 
+      {% block wishlist %}
       <ul class="list-ul-container">
 
         <!-- ==========  QuerySet  ========== -->
@@ -123,51 +129,66 @@
           </li>
         {% endfor %}
 
+        {% endblock wishlist %}
       </ul>
     </div>
 
 <!--================================================
     Dashboard-Tips section
     ================================================ -->
-    <div class="list-container">
+    <div class="list-container" id="tips-list-container">
       <h3 class="list-container-heading">
-        <a href="{{ request.protocol }}{{ request.host }}{{ tips }}" class="heading-link">
+        <a href="{{ request.protocol }}{{ request.host }}/housewiki/tips/" class="heading-link">
           Knowledge &amp; Tips
-          <span class="heading-a-link">
+          <span class="heading-a-link" id="tips-dashboard-link">
             see all or edit
           </span>
         </a>
+        <span class="heading-a-link" id="add-tip-link">
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/tips/add/" class="heading-a-link">
+            add a tip
+          </a>
+        </span>
       </h3>
       <p class="explain-section">
         What we've learned and need to remember.<br />
-        <span class="newline">Newest addition:</span>
+        <span class="newline" id="tips-newline-span">Newest addition:</span>
       </p>
 
+      {% block tips %}
       <ul class="list-ul-container">
 
         <!-- ==========  QuerySet  ========== -->
         {% for tip in knowledge_and_tips_list %}
           <li class="list-item">{{ tip.title|capfirst|truncatewords:12 }}</li>
         {% endfor %}
+        {% endblock tips %}
       </ul>
     </div>
 
 <!--================================================
     Dashboard-Other Factors section
     ================================================ -->
-    <div class="list-container">
+    <div class="list-container" id="otherfactors-list-container">
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
           Things To Consider
-          <span class="heading-a-link">
+          <span class="heading-a-link" id="otherfactors-sidebar-link">
             see all or edit
           </span>
         </a>
+        <span class="heading-a-link" id="add-otherfactor-link">
+          <a href="{{ request.protocol }}{{ request.host }}/housewiki/otherfactors/add/" class="heading-a-link">
+            add something
+          </a>
+        </span>
       </h3>
       <p class="explain-section">
         What we want to keep in mind while house hunting.<br />
-        <span class="newline">Newest addition:</span>
+        <span class="newline" id="otherfactors-newline-span">Newest addition:</span>
       </p>
+
+      {% block otherfactors %}
 
       <ul class="list-ul-container">
 
@@ -181,6 +202,7 @@
           </li>
         {% endfor %}
 
+        {% endblock otherfactors %}
       </ul>
     </div>
 

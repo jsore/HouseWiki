@@ -131,7 +131,7 @@ body {
 .collapsed {
   display: none;
 }
-#add-question-link {
+#add-question-link, #add-wishlist-link, #add-tip-link, #add-otherfactor-link {
   display: none;
 }
 .edit, .delete {
