@@ -18,7 +18,9 @@ body {
   /*grid-template-rows: 100% auto;*/
   /*grid-template-columns: auto auto;*/
   grid-template-columns: 200px auto;
-  grid-auto-rows: 100%;
+  /*grid-auto-rows: 100%;*/
+  grid-auto-rows: auto;
+  padding-bottom: 20px;
   /*animation: fadeInAnimation ease 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;*/
@@ -254,7 +256,7 @@ h1, h2, h3 {
   color: #999999;
   font-size: 14px;
 }
-.property-rank, .milestone-status, .is-question-answered, .question-answered {
+#add-property-link, .property-rank, .milestone-status, .is-question-answered, .question-answered {
   color: #999999;
   font-size: 14px;
   display: inline;
@@ -425,7 +427,7 @@ h1, h2, h3 {
   max-height: 400px;
 }
 
-.mark-milestone, .answer-the-question, .add-milestone-link {
+.mark-milestone, .answer-the-question, #add-milestone-link {
   display: none;
 }
 

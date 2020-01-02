@@ -18,7 +18,8 @@
 
     <li class="list-item" style="list-style: none; padding: 0 0 0 0">
             {# set this as hidden/shown with JS based on milestone-status #}
-      <a href="#" class="heading-a-link mark-milestone">mark as reached</a>
+      <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/edit/{{ milestone_item.slug|truncatewords:15 }}/"
+        class="heading-a-link mark-milestone">mark as reached</a>
       <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/edit/{{ milestone_item.slug|truncatewords:15 }}/"
         class="heading-a-link">edit</a>
       <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/delete/{{ milestone_item.slug|truncatewords:15 }}/"
