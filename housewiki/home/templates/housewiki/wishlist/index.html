@@ -18,7 +18,7 @@
             </span>
       {# <span class="wish-item-ranking">{{ wishlist_item.ranking|lower }}</span> #}
     </li>
-
+    {% if request.user.is_authenticated %}
     <li class="list-item" style="list-style: none; padding: 0 0 0 12px">
             {# set this as hidden/shown with JS based on milestone-status #}
       <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/edit/{{ wishlist_item.slug|truncatewords:15 }}/"
@@ -26,5 +26,6 @@
       <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/delete/{{ wishlist_item.slug|truncatewords:15 }}/"
         class="heading-a-link">delete</a>
     </li>
+    {% endif %}
   {% endfor %}
 {% endblock wishlist %}

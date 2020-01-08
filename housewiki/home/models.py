@@ -2,12 +2,15 @@
 …/HouseWiki/housewiki/home/models.py
 """
 
-
+# from django.http import HttpResponse
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
 from django.urls import reverse
 from django.contrib.auth.models import User
+# from django.contrib.auth import authenticate, login
+# from .forms import LoginForm
+
 # from django.db
 
 

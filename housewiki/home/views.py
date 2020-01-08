@@ -6,12 +6,14 @@ template after passing any required variables and data to
 the template.
 """
 
-
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import ListView
-
+from django.contrib.auth import authenticate, login
+from .forms import LoginForm
 from .models import Property, Milestone, Question, WishList, KnowledgeAndTips, ThingsToConsider
+
 
 # having some issues with template data inheritance
 # aware that this isn't ideal but i'm okay with it for now
@@ -21,6 +23,29 @@ wishlist_list = WishList.objects.order_by('-created')[:1]
 knowledge_and_tips_list = KnowledgeAndTips.objects.order_by('-created')[:1]
 things_to_consider_list = ThingsToConsider.objects.order_by('-created')[:1]
 property_list = Property.objects.order_by('ranking')
+
+
+def user_login(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(request,
+                                username=cd['username'],
+                                password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return HttpResponse('Authenticated '\
+                                        'successfully')
+                else:
+                    return HttpResponse('Disabled account')
+            else:
+                return HttpResponse('Invalid login')
+    else:
+        form = LoginForm()
+    return render(request, 'housewiki/user/login.html', {'form': form})
+
 
 def dashboard(request):
 

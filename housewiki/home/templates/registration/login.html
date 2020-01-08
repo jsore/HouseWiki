@@ -1,0 +1,15 @@
+{% extends "housewiki/base.html" %}
+
+{% block title %}
+  Log in
+{% endblock title %}
+
+{% block content %}
+  <h1>Log in</h1>
+  <form action="." method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ request.protocol }}{{ request.host }}/housewiki/">
+    <p><input type="submit" value="Log in"></p>
+  </form>
+{% endblock content %}

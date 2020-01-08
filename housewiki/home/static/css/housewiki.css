@@ -35,6 +35,7 @@ body {
 }*/
 #sidebar {
   /*transition: .35s;*/
+  position: fixed;
   display: grid;
   height: 100%;
   /*background: #efefef;*/
@@ -162,7 +163,7 @@ body {
   padding-top: 40px;
   text-align: left;
 }
-.floorplan-link {
+.floorplan-link, .login-logout-link {
   font-size: 14px;
   text-decoration: underline;
   color: #888;

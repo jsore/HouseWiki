@@ -25,6 +25,7 @@
         <li class="list-item">Answer: {{ question_item.answer }}</li>
       {% else %}
         {# <span class="question-answered"> #}
+        {% if request.user.is_authenticated %}
         <li class="list-item" style="list-style: none; padding: 0">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/answer/{{ question_item.slug|truncatewords:15 }}/"
             class="heading-a-link" style="padding: 0">answer question</a>
@@ -33,7 +34,7 @@
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/delete/{{ question_item.slug|truncatewords:15 }}/"
             class="heading-a-link">delete</a>
         </li>
-
+        {% endif %}
       {% endif %}
     {% endfor %}
     </ul>

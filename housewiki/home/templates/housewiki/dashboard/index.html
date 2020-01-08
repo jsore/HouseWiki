@@ -15,15 +15,23 @@
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/" class="heading-link">
           Milestones
+          {% if request.user.is_authenticated %}
           <span class="heading-a-link" id="milestones-dashboard-link">
             see all or edit
           </span>
+          {% else %}
+          <span class="heading-a-link" id="milestones-dashboard-link">
+            see all
+          </span>
+          {% endif %}
         </a>
+        {% if request.user.is_authenticated %}
         <span class="heading-a-link" id="add-milestone-link">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/milestones/add/" class="heading-a-link">
             add milestone
           </a>
         </span>
+        {% endif %}
       </h3>
       <p class="explain-section">
         What we need to or already have accomplished.<br />
@@ -56,14 +64,22 @@
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/" class="heading-link">
           Questions
+          {% if request.user.is_authenticated %}
           <span class="heading-a-link" id="questions-dashboard-link">
             see all or edit
           </span>
+          {% else %}
+          <span class="heading-a-link" id="questions-dashboard-link">
+            see all
+          </span>
+          {% endif %}
         </a>
+        {% if request.user.is_authenticated %}
         <span class="heading-a-link" id="add-question-link">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/questions/add/" class="heading-a-link">
           add question</a>
         </span>
+        {% endif %}
       </h3>
       <p class="explain-section">
         What we want to know about home buying.<br />
@@ -84,7 +100,9 @@
                 <li class="list-item">Answer: {{ question.answer }}</li>
               {% else %}
                 <span class="question-answered">not answered</span>
-                <a href="#" class="heading-a-link answer-the-question">answer question</a>
+                {% if request.user.is_authenticated %}
+                  <a href="#" class="heading-a-link answer-the-question">answer question</a>
+                {% endif %}
               {% endif %}
             </li>
           {% endfor %}
@@ -101,15 +119,23 @@
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}/housewiki/wishlist/" class="heading-link">
           Wish List
+          {% if request.user.is_authenticated %}
           <span class="heading-a-link" id="wishlist-dashboard-link">
             see all or edit
           </span>
+          {% else %}
+          <span class="heading-a-link" id="wishlist-dashboard-link">
+            see all
+          </span>
+          {% endif %}
         </a>
+        {% if request.user.is_authenticated %}
         <span class="heading-a-link" id="add-wishlist-link">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/wishlist/add/" class="heading-a-link">
             add wishlist item
           </a>
         </span>
+        {% endif %}
       </h3>
       <p class="explain-section">
         What traits we want in a property.<br />
@@ -140,15 +166,23 @@
       <h3 class="list-container-heading">
         <a href="{{ request.protocol }}{{ request.host }}/housewiki/tips/" class="heading-link">
           Knowledge &amp; Tips
+          {% if request.user.is_authenticated %}
           <span class="heading-a-link" id="tips-dashboard-link">
             see all or edit
           </span>
+          {% else %}
+          <span class="heading-a-link" id="tips-dashboard-link">
+            see all
+          </span>
+          {% endif %}
         </a>
+        {% if request.user.is_authenticated %}
         <span class="heading-a-link" id="add-tip-link">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/tips/add/" class="heading-a-link">
             add a tip
           </a>
         </span>
+        {% endif %}
       </h3>
       <p class="explain-section">
         What we've learned and need to remember.<br />
@@ -171,17 +205,25 @@
     ================================================ -->
     <div class="list-container" id="otherfactors-list-container">
       <h3 class="list-container-heading">
-        <a href="{{ request.protocol }}{{ request.host }}{{ things_to_consider }}" class="heading-link">
+        <a href="{{ request.protocol }}{{ request.host }}/housewiki/otherfactors/" class="heading-link">
           Things To Consider
+          {% if request.user.is_authenticated %}
           <span class="heading-a-link" id="otherfactors-sidebar-link">
             see all or edit
           </span>
+          {% else %}
+          <span class="heading-a-link" id="otherfactors-sidebar-link">
+            see all
+          </span>
+          {% endif %}
         </a>
+        {% if request.user.is_authenticated %}
         <span class="heading-a-link" id="add-otherfactor-link">
           <a href="{{ request.protocol }}{{ request.host }}/housewiki/otherfactors/add/" class="heading-a-link">
             add something
           </a>
         </span>
+        {% endif %}
       </h3>
       <p class="explain-section">
         What we want to keep in mind while house hunting.<br />
@@ -214,11 +256,14 @@
   <div class="property-list">
     <h3 class="property-list-heading">
       Favorite Properties
+      {% if request.user.is_authenticated %}
       <span class="heading-a-link" id="add-property-link">
       <a href="{{ request.protocol }}{{ request.host }}/housewiki/properties/add/" class="heading-a-link">
       add another property</a>
-    </span>
+      </span>
+      {% endif %}
     </h3>
+
 
     <div>
 
@@ -231,7 +276,9 @@
             {{ property.ranking }}
           </p>
           <!--<p>-->
+            {% if request.user.is_authenticated %}
             <a href="#" class="heading-a-link">edit</a>
+            {% endif %}
           <!--</p>-->
         </h3>
 
@@ -281,7 +328,9 @@
                   <li class="additional-opinions-child-li list-item-title">
                     <a href="#" class="heading-link">
                       Likes/dislikes about floorplan
+                      {% if request.user.is_authenticated %}
                       <span class="heading-a-link">edit</span>
+                      {% endif %}
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.optional_floorplan_info|capfirst }}</span>
@@ -291,7 +340,9 @@
                 <li class="additional-opinions-li">
                   <li class="additional-opinions-child-li list-item-title">
                     <a href="#" class="heading-link">Features that stood out
+                      {% if request.user.is_authenticated %}
                       <span class="heading-a-link">edit</span>
+                      {% endif %}
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.standout_features|capfirst }}</span>
@@ -301,7 +352,9 @@
                 <li class="additional-opinions-li">
                   <li class="additional-opinions-child-li list-item-title">
                     <a href="#" class="heading-link">Desired packages/elevation
+                      {% if request.user.is_authenticated %}
                       <span class="heading-a-link">edit</span>
+                      {% endif %}
                     </a>
                     <br /><br />
                     <span class="list-item-span">{{ property.desired_options|capfirst }}</span>
