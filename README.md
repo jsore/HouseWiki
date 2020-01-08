@@ -295,14 +295,14 @@ This answers what this repo accomplishes. It should be able to do, provide a spa
 
 <br>
 
-  - [ ] User accounts
-    + Django admin, Justin, Tiffany, guest ( in case anyone else wants to see )
+  - [x] User accounts
+    + Django admin, Justin, Tiffany, ~~guest ( in case anyone else wants to see )~~
     + persist logins across devices ( cookies? )
     + restrict adding comments until logged in
       * put a 'log in to post comments' placeholder for non-authed visitors?
-      * restrict guest account from commenting?
-      * don't even allow non-authed visitors from accessing _anything_? ( splashpage on load )
-      * option to register as a user?
+      * ~~restrict guest account from commenting?~~
+      * ~~don't even allow non-authed visitors from accessing _anything_? ( splashpage on load )~~
+      * ~~option to register as a user?~~
 
 </details>
 
