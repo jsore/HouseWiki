@@ -186,6 +186,15 @@ def otherfactors(request):
                    'knowledge_and_tips_list': knowledge_and_tips_list})
 
 
+def editform(request):
+    return render()
+
+
+def deleteform(request):
+    return render()
+
+
+
 class HousePicturesView(ListView):
     model = Property
     # template_name = 'housewiki/dashboard/homes.html'
